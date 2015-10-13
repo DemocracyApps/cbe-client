@@ -1,0 +1,23 @@
+{
+  "name": "cbe-client",
+  "version": "1.0.0",
+  "description": "ReactJS front-end for the public-facing functionality of the Community Budget Explorer platform.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DemocracyApps/cbe-client.git"
+  },
+  "keywords": [
+    "openbudgets",
+    "opendata"
+  ],
+  "author": "ejaxon",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/DemocracyApps/cbe-client/issues"
+  },
+  "homepage": "https://github.com/DemocracyApps/cbe-client#readme"
+}
