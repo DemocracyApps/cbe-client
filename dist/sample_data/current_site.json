@@ -1,0 +1,701 @@
+{
+    "site": [
+        {
+            "name": "Asheville, NC Budget 2015-2016",
+            "id": 0,
+            "slug": "asheville",
+            "startPage": 0,
+            "embedded": false,
+            "baseUrl": "http://gbe.dev/sites/asheville",
+            "isMapped": false,
+            "apiUrl": "http://gbe.dev/api/v1/organizations/2",
+            "ajaxUrl": "http://gbe.dev/ajax/sites/base",
+            "properties": "{\"map\":\"serviceareas.json\",\"reverseRevenueSign\":true}",
+            "categoryMap": null
+        }
+    ],
+    "pages": [
+        {
+            "tableId": 5,
+            "title": "Welcome to the 2015-16 Asheville Budget Explorer!",
+            "shortName": "Overview",
+            "menuName": "Overview",
+            "description": null,
+            "layout": {
+                "name": "DefaultHome",
+                "description": "Default budget site home page.",
+                "rows": [
+                    {
+                        "columns": [
+                            {
+                                "id": "Top",
+                                "class": "col-xs-12",
+                                "style": {
+                                    "margin": "0px 0px 45px"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "columns": [
+                            {
+                                "id": "Bottom",
+                                "class": "col-xs-12"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "properties": [
+                
+            ],
+            "id": 0,
+            "components": {
+                "Top": [
+                    {
+                        "id": 0,
+                        "componentName": "SlideShow",
+                        "componentType": 1,
+                        "componentData": {
+                            "mycardset": {
+                                "type": "card",
+                                "ids": [
+                                    8,
+                                    9,
+                                    10,
+                                    11,
+                                    12,
+                                    13
+                                ]
+                            }
+                        },
+                        "componentProps": [
+                            
+                        ],
+                        "componentState": [
+                            
+                        ]
+                    }
+                ],
+                "Bottom": [
+                    {
+                        "id": 1,
+                        "componentName": "NavCards",
+                        "componentType": 1,
+                        "componentData": {
+                            "mycardset": {
+                                "type": "card",
+                                "ids": [
+                                    14,
+                                    15,
+                                    16
+                                ]
+                            }
+                        },
+                        "componentProps": [
+                            
+                        ],
+                        "componentState": [
+                            
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "tableId": 6,
+            "title": "Investigate What's Changed",
+            "shortName": "whatsnew",
+            "menuName": "What's New?",
+            "description": null,
+            "layout": {
+                "name": "One-Column",
+                "rows": [
+                    {
+                        "columns": [
+                            {
+                                "id": "main",
+                                "class": "col-xs-12"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "properties": [
+                
+            ],
+            "id": 1,
+            "components": {
+                "main": [
+                    {
+                        "id": 2,
+                        "componentName": "WhatsNewPage",
+                        "componentType": 1,
+                        "componentData": [
+                            
+                        ],
+                        "componentProps": {
+                            "detailSelectorOn": "Yes"
+                        },
+                        "componentState": [
+                            
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "tableId": 7,
+            "title": "Detailed Breakdown of Spending & Revenue",
+            "shortName": "showme",
+            "menuName": "Show Me The Money",
+            "description": null,
+            "layout": {
+                "name": "One-Column",
+                "rows": [
+                    {
+                        "columns": [
+                            {
+                                "id": "main",
+                                "class": "col-xs-12"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "properties": [
+                
+            ],
+            "id": 2,
+            "components": {
+                "main": [
+                    {
+                        "id": 3,
+                        "componentName": "ShowMePage",
+                        "componentType": 1,
+                        "componentData": {
+                            "mydatasets": {
+                                "type": "dataset",
+                                "ids": [
+                                    13,
+                                    12,
+                                    11,
+                                    10,
+                                    9,
+                                    8,
+                                    7
+                                ]
+                            }
+                        },
+                        "componentProps": {
+                            "detailSelectorOn": "Yes",
+                            "accountTypeSelectorOn": "Yes",
+                            "startYear": "1"
+                        },
+                        "componentState": [
+                            
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "tableId": 8,
+            "title": "Budget Document Breakdown",
+            "shortName": "docmap",
+            "menuName": "Budget Doc Breakdown",
+            "description": "Explore the full budget document and city website financial materials below.",
+            "layout": {
+                "name": "One-Column",
+                "rows": [
+                    {
+                        "columns": [
+                            {
+                                "id": "main",
+                                "class": "col-xs-12"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "properties": [
+                
+            ],
+            "id": 3,
+            "components": {
+                "main": [
+                    {
+                        "id": 4,
+                        "componentName": "CardTable",
+                        "componentType": 1,
+                        "componentData": {
+                            "mycardset": {
+                                "type": "card",
+                                "ids": [
+                                    17,
+                                    18,
+                                    19,
+                                    20,
+                                    21,
+                                    22,
+                                    23,
+                                    24,
+                                    25,
+                                    26,
+                                    27,
+                                    28,
+                                    29,
+                                    30,
+                                    31,
+                                    32
+                                ]
+                            }
+                        },
+                        "componentProps": {
+                            "maxColumns": "2"
+                        },
+                        "componentState": [
+                            
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "tableId": 9,
+            "title": "About This Site",
+            "shortName": "About",
+            "menuName": "About",
+            "description": null,
+            "layout": {
+                "name": "One-Column",
+                "rows": [
+                    {
+                        "columns": [
+                            {
+                                "id": "main",
+                                "class": "col-xs-12"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "properties": [
+                
+            ],
+            "id": 4,
+            "components": {
+                "main": [
+                    {
+                        "id": 5,
+                        "componentName": "SimpleCard",
+                        "componentType": 1,
+                        "componentData": {
+                            "mycard": {
+                                "type": "card",
+                                "ids": [
+                                    33
+                                ]
+                            }
+                        },
+                        "componentProps": {
+                            "headerTag": "0"
+                        },
+                        "componentState": [
+                            
+                        ]
+                    },
+                    {
+                        "id": 6,
+                        "componentName": "SimpleCard",
+                        "componentType": 1,
+                        "componentData": {
+                            "mycard": {
+                                "type": "card",
+                                "ids": [
+                                    34
+                                ]
+                            }
+                        },
+                        "componentProps": {
+                            "headerTag": "2"
+                        },
+                        "componentState": [
+                            
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "data": [
+        {
+            "id": 8,
+            "cardSet": 5,
+            "title": "Revenue Highlights",
+            "body": [
+                "<ul>\n<li>1.5 cent property tax increase to 47.5 cents per $100 assessed value</li>\n<li>4% increase in sales tax revenue</li>\n<li>12% decrease in licensing and permitting revenue</li>\n<li>5.4% inter-governmental revenue increase in General Fund</li>\n<li>No appropriation from unassigned fund balance</li>\n</ul>"
+            ],
+            "image": "/img/cards/pic561588c2b5daa.jpg",
+            "link": "/docs/asheville/Revenue_Summary.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 9,
+            "cardSet": 5,
+            "title": "Spending Highlights",
+            "body": [
+                "<ul>\n<li>3.6% overall increase in spending</li>\n<li>$1M increase in Public Safety</li>\n<li>$354,000 increase in Environment &amp; Transportation</li>\n<li>$250,000 increase for seasonal/temporary staff living wage</li>\n</ul>"
+            ],
+            "image": "/img/cards/pic561588c33b0e3.jpg",
+            "link": "/docs/asheville/Expenditure_Summary.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 10,
+            "cardSet": 5,
+            "title": "City Council Budget Goals",
+            "body": [
+                "<ul>\n<li>Classification and Compensation Study, Managed Savings</li>\n<li>Asheville Police Department Management Goals &amp; Strategic Plan</li>\n<li>Reducing Taxpayer Subsidy of Programs</li>\n<li>Continuing Sound Financial Management by Addressing Long-Term Liabilities</li>\n</ul>"
+            ],
+            "image": "/img/cards/pic561588c351cf8.jpg",
+            "link": "/docs/asheville/Council_Budget_Goals.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 11,
+            "cardSet": 5,
+            "title": "Staffing Highlights",
+            "body": [
+                "<ul>\n<li>14.25 FTE positions added in General Fund</li>\n<li>10.37 FTE positions added in enterprise funds</li>\n<li>Living wage extended to seasonal/temporary staff</li>\n<li>1% across-the-board pay raise</li>\n</ul>"
+            ],
+            "image": "/img/cards/pic561588c374ab4.jpg",
+            "link": "/docs/asheville/Staffing_Summary.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 12,
+            "cardSet": 5,
+            "title": "Budget Highlights By Fund",
+            "body": [
+                "<ul>\n<li>Water Resources: Rate changes generate $465,000 new revenue</li>\n<li>Stormwater: 5% rate adjustment generates $240,000 new revenue</li>\n<li>Transit: Fully funded Sunday service plus minor route adjustments</li>\n<li>Parking Services: No rate change; revenue up &amp; trend expected to continue</li>\n<li>Street Cut Utility: $240,000 spending increase</li>\n</ul>"
+            ],
+            "image": "/img/cards/pic561588c3a1bf4.jpg",
+            "link": "/docs/asheville/Budget_Highlights_Summary.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 13,
+            "cardSet": 5,
+            "title": "Capital Improvements",
+            "body": [
+                "<ul>\n<li>Capital Expenditures program begun in FY2014 is now in full swing</li>\n<li>$26.2M proposed spending for FY2016</li>\n<li>$16.9M was spent during FY2014 &amp; FY2015</li>\n<li>$64.3M planned over the next 4 budget cycles (FY2017-FY2020)</li>\n</ul>"
+            ],
+            "image": "/img/cards/pic561588c3b77c6.jpg",
+            "link": "/docs/asheville/CapitalImprovementProgramAndDebt.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 14,
+            "cardSet": 6,
+            "title": "What's New?",
+            "body": [
+                "<p>Discover what's changed since last year</p>"
+            ],
+            "image": null,
+            "link": "whatsnew",
+            "dataType": "card"
+        },
+        {
+            "id": 15,
+            "cardSet": 6,
+            "title": "Show Me The Money",
+            "body": [
+                "<p>Explore the sources and uses of public funds</p>"
+            ],
+            "image": null,
+            "link": "showme",
+            "dataType": "card"
+        },
+        {
+            "id": 16,
+            "cardSet": 6,
+            "title": "Budget Document Map",
+            "body": [
+                "<p>Navigate the City's budget document</p>"
+            ],
+            "image": null,
+            "link": "docmap",
+            "dataType": "card"
+        },
+        {
+            "dataType": "dataset",
+            "id": 13,
+            "categories": [
+                "Fund",
+                "Department",
+                "Division",
+                "Account"
+            ]
+        },
+        {
+            "dataType": "dataset",
+            "id": 12,
+            "categories": [
+                "Fund",
+                "Department",
+                "Division",
+                "Account"
+            ]
+        },
+        {
+            "dataType": "dataset",
+            "id": 11,
+            "categories": [
+                "Fund",
+                "Department",
+                "Division",
+                "Account"
+            ]
+        },
+        {
+            "dataType": "dataset",
+            "id": 10,
+            "categories": [
+                "Fund",
+                "Department",
+                "Division",
+                "Account"
+            ]
+        },
+        {
+            "dataType": "dataset",
+            "id": 9,
+            "categories": [
+                "Fund",
+                "Department",
+                "Division",
+                "Account"
+            ]
+        },
+        {
+            "dataType": "dataset",
+            "id": 8,
+            "categories": [
+                "Fund",
+                "Department",
+                "Division",
+                "Account"
+            ]
+        },
+        {
+            "dataType": "dataset",
+            "id": 7,
+            "categories": [
+                "Fund",
+                "Department",
+                "Division",
+                "Account"
+            ]
+        },
+        {
+            "id": 17,
+            "cardSet": 7,
+            "title": "Full Proposed 2015-2016 Budget",
+            "body": [
+                "<p>Use the button below to download the full 2015-16 City of Asheville Proposed Budget document.</p>"
+            ],
+            "image": null,
+            "link": "/docs/asheville/FY 2015- 16 Proposed Budget.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 18,
+            "cardSet": 7,
+            "title": "Table of Contents",
+            "body": [
+                "<p>Click on the thumbnail or below to explore the Table of Contents for the entire 2015-2016 Proposed Budget.</p>"
+            ],
+            "image": "/img/cards/pic561588c3d30e2.jpg",
+            "link": "/docs/asheville/1-TableOfContents.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 19,
+            "cardSet": 7,
+            "title": "City Manager's Message",
+            "body": [
+                "<p>May 26, 2015</p>\n<p>Honorable Mayor Manheimer and City Council Members:</p>\n<p>It is my pleasure to respectfully submit to you the City Manager's Proposed Budget for the fiscal year\nbeginning July 1, 2015 and ending June 30, 2016 with a total operating budget of $154 million. The proposed\nbudget includes a total General Fund Budgetof $103 million, a 3.6% increase over the adopted fiscal year\n2014-2015 budget. The proposed budget includes an increase to the property tax rate of 1.5 cents per $1000\nof valuation, bringing the total millage rate to 47.5 cents.</p>"
+            ],
+            "image": null,
+            "link": "/docs/asheville/2-ManagersLetter_FY2016.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 20,
+            "cardSet": 7,
+            "title": "Organizational Structure",
+            "body": [
+                "<p>Understand the organizational structure underlying the City's operating budget. Click <a href=\"http://www.ashevillenc.gov/Portals/0/city-documents/communityrelations/about_city_government/COA%20Organizational%20Chart%20041615.pdf\">here</a> for a full-size version\nof the organization chart at left.</p>"
+            ],
+            "image": "/img/cards/pic561588c3deef6.jpg",
+            "link": "/docs/asheville/3-Introduction.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 21,
+            "cardSet": 7,
+            "title": "Budget Process",
+            "body": [
+                "<p>Budget preparation affords departments the opportunity to reassess their goals and objectives\nand the strategies for accomplishing them. Even though the proposed budget may be heard by\nCity Council in May and adopted in June, its preparation begins at least six months prior\nwith projections of City reserves, revenues, and financial capacity.</p>",
+                "<p>Read more about:</p>\n<ul>\n<li>Financial forecasting</li>\n<li>City Council Strategic Planning</li>\n<li>Departmental Budget Development</li>\n<li>City Manager Review</li>\n<li>Budget Adoption</li>\n<li>Budget Amendments and Revisions</li>\n<li>Basis of Budgeting</li>\n</ul>"
+            ],
+            "image": null,
+            "link": "/docs/asheville/Budget_Process.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 22,
+            "cardSet": 7,
+            "title": "FY 2015-16 Budget Calendar",
+            "body": [
+                "<p>Examine the detailed calendar of steps over the past year that led to the proposed budget.</p>"
+            ],
+            "image": "/img/cards/pic561588c3ef817.jpg",
+            "link": "/docs/asheville/Budget_Calendar.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 23,
+            "cardSet": 7,
+            "title": "Financial Policies",
+            "body": [
+                "<p>The City of Asheville financial policies establish general guidelines for the fiscal management of the City.\nThese guidelines, influenced by the North Carolina Local Government Budget and Fiscal Control Act and\nsound financial principles, provide the framework for budgetary and fiscal planning. Operating independently\nof changing circumstances and conditions, these policies assist the decision-making processes of the City Council\nand City administration.</p>"
+            ],
+            "image": null,
+            "link": "/docs/asheville/Financial_Policy.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 24,
+            "cardSet": 7,
+            "title": "Budget Summary",
+            "body": [
+                "<p>Click on the thumbnail or below to explore the budget summary tables\nand highlights of revenue, expenditure, and staffing for all funds.</p>"
+            ],
+            "image": "/img/cards/pic561588c4090eb.jpg",
+            "link": "/docs/asheville/4-BudgetSummary.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 25,
+            "cardSet": 7,
+            "title": "General Government",
+            "body": [
+                "<p>Click on the thumbnail or below to explore budget details for Finance and Management\nServices, Administrative Services, General Services, Economic Development, City Attorney's Office,\nInformation Technology Services, and Human Resources.</p>"
+            ],
+            "image": "/img/cards/pic561588c411e6b.jpg",
+            "link": "/docs/asheville/5-GeneralGovernment.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 26,
+            "cardSet": 7,
+            "title": "Public Safety",
+            "body": [
+                "<p>Click on the thumbnail or below to explore budget details for Police and Fire &amp; Rescue.</p>"
+            ],
+            "image": "/img/cards/pic561588c41d60c.jpg",
+            "link": "/docs/asheville/6-PublicSafety.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 27,
+            "cardSet": 7,
+            "title": "Environment & Transportation",
+            "body": [
+                "<p>Click on the thumbnail or below to explore budget details the Water Resources Fund,\nMulti-Modal Transportation and Capital Projects, Public Works, the Stormwater Fund, the Street Cut Utility Fund,\nTransportation, the Transit Services Fund, and the Parking Services Fund.</p>"
+            ],
+            "image": "/img/cards/pic561588c425a1d.jpg",
+            "link": "/docs/asheville/7-EnvironmentAndTransportation.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 28,
+            "cardSet": 7,
+            "title": "Culture & Recreation",
+            "body": [
+                "<p>Click on the thumbnail or below to explore budget details for Parks, Recreation &amp; Cultural Affairs, and for the US Cellular Center.</p>"
+            ],
+            "image": "/img/cards/pic561588c430b2e.jpg",
+            "link": "/docs/asheville/8-CultureRecreation.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 29,
+            "cardSet": 7,
+            "title": "Community Development",
+            "body": [
+                "<p>Click on the thumbnail or below to explore budget details Planning and Urban\nDesign, the Housing Trust Fund, Building Safety and Development Services.</p>"
+            ],
+            "image": "/img/cards/pic561588c439256.jpg",
+            "link": "/docs/asheville/9-CommunityDevelopment.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 30,
+            "cardSet": 7,
+            "title": "Capital Improvements/Debt Management",
+            "body": [
+                "<p>Click on the thumbnail or below to explore budget details for the General\nCapital Fund, the Water Resources Capital Fund, and the Parking Services Capital Fund, including a project-by-project listing.</p>"
+            ],
+            "image": "/img/cards/pic561588c441c37.jpg",
+            "link": "/docs/asheville/10-CapitalImprovementProgramAndDebt.pdf",
+            "dataType": "card"
+        },
+        {
+            "id": 31,
+            "cardSet": 7,
+            "title": "Comprehensive Annual Financial Reports (CAFR)",
+            "body": [
+                "<p>State law requires that all municipal governments publish a complete set of financial statements\npresented in conformity with generally accepted accounting principles (GAAP).</p>\n<ul>\n<li><a href=\"http://www.ashevillenc.gov/Portals/0/city-documents/finance/2014CAFR.pdf\">Fiscal Year Ended June 30, 2014</a></li>\n<li><a href=\"http://www.ashevillenc.gov/Portals/0/city-documents/finance/CAFR%2012172013.pdf\">Fiscal Year Ended June 30, 2013</a></li>\n<li><a href=\"http://www.ashevillenc.gov/Portals/0/images/departments/finance/CAFR%202013%20with%20changes.pdf\">Fiscal Year Ended June 30, 2012</a></li>\n<li><a href=\"http://www.ashevillenc.gov/Portals/0/city-documents/finance/cafr/CAFR%202011.pdf\">Fiscal Year Ended June 30, 2011</a></li>\n<li><a href=\"http://www.ashevillenc.gov/Portals/0/city-documents/finance/cafr/CAFR2010.pdf\">Fiscal Year Ended June 30, 2010</a></li>\n<li><a href=\"http://www.ashevillenc.gov/Portals/0/city-documents/finance/cafr/2009%20COA%20CAFR.pdf\">Fiscal Year Ended June 30, 2009</a></li>\n<li><a href=\"http://www.ashevillenc.gov/Portals/0/city-documents/finance/cafr/CAFR%202008.pdf\">Fiscal Year Ended June 30, 2008</a></li>\n<li><a href=\"http://www.ashevillenc.gov/Portals/0/city-documents/finance/CAFR%202007.pdf\">Fiscal Year Ended June 30, 2007</a></li>\n</ul>"
+            ],
+            "image": "/img/cards/pic561588c44aa1e.jpg",
+            "link": "http://www.ashevillenc.gov/Departments/Finance/ComprehensiveAnnualFinancialReports.aspx",
+            "dataType": "card"
+        },
+        {
+            "id": 32,
+            "cardSet": 7,
+            "title": "Finance Committe Meeting Materials",
+            "body": [
+                "<p>Meeting agendas, meeting minutes and supporting documents can be found on the\nCity of Asheville website.</p>"
+            ],
+            "image": null,
+            "link": "http://www.ashevillenc.gov/Departments/CityClerk/CouncilCommittees/FinanceCommittee/MeetingMaterials.aspx",
+            "dataType": "card"
+        },
+        {
+            "id": 33,
+            "cardSet": 8,
+            "title": "About This Site",
+            "body": [
+                "<p><em>Don't tell me what you value, show me your budget, and I'll tell you what you value. - Joe Biden</em></p>\n<p>The purpose of this site is to help support the public conversation\nin Asheville about what our priorities are as a community and how we fund efforts to\nachieve those priorities.</p>\n<p>This site is built on a free, open-source platform developed by <a href=\"http://democracyapps.us\">DemocracyApps</a>, a local civic tech\nstartup.</p>\n<p>The site is entirely a volunteer effort. We would like to acknowledge the active support and help of\nvolunteers from <a href=\"http://www.codeforasheville.org/\">Code for Asheville</a> and\nthe <a href=\"http://avlcoders.org/\">Asheville Coders League</a>. A tip of the hat\nto <a href=\"http://www.goinvo.com/\">Involution Studios</a> for the amazing <em>Show Me The Money</em> visualization. We\nwould also like to thank the staff of the City\nof Asheville for their ongoing cooperation and support.</p>"
+            ],
+            "image": null,
+            "link": null,
+            "dataType": "card"
+        },
+        {
+            "id": 34,
+            "cardSet": 8,
+            "title": "Contact us",
+            "body": [
+                "<iframe src=\"https://docs.google.com/forms/d/1gtQxsqx_HYwHh65046wsAavrlJcgMLYlQJ-tLtfsBF4/viewform?embedded=true\" width=\"760\" height=\"700\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading...</iframe>"
+            ],
+            "image": null,
+            "link": null,
+            "dataType": "card"
+        }
+    ]
+}
