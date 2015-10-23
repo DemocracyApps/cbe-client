@@ -5,6 +5,7 @@ import App from './containers/App';
 import configureStore from './state/configureStore';
 import { setSiteState } from './state/actions/siteActions';
 import { initializeSite } from './utilities/initializers';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 console.log("RUNMODE = " + __RUNMODE__);
 

@@ -16,7 +16,6 @@ class Site extends Component {
       styles = {maxWidth:this.props.site.maxWidth};
     }
 
-
     return (
       <div className="container" style={styles}>
         <Page title={page.get('title')} description={page.get('description')} layout={page.get('layout')} />

@@ -16,7 +16,7 @@ CBEVars.site = [{
             "columns": [
               {
                 "id": "Top",
-                "class": "col-xs-12",
+                "class": "col-xs-8",
                 "style": {
                   "margin": "0px 0px 45px"
                 },
@@ -45,7 +45,7 @@ CBEVars.site = [{
             "columns": [
               {
                 "id": "Bottom",
-                "class": "col-xs-12",
+                "class": "col-xs-4",
                 "components": [
                   {
                     "componentName": "SimpleCard",
