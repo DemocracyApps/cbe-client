@@ -108,3 +108,11 @@ export function initializeSite (inputConfig) {
 
   return site;
 }
+
+export function initializeCards (inputCards) {
+  let cards = {};
+
+  return cards;
+}
+
+
