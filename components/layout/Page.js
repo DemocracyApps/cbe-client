@@ -10,7 +10,7 @@ class Page extends Component {
   }
 
   render () {
-    const { title, description, layout } = this.props;
+    const { title, description, layout, components } = this.props;
     return (
       <div>
         <div className="container-fluid">
@@ -22,7 +22,8 @@ class Page extends Component {
           </div>
         </div>
         <div className="container-fluid site-body">
-          <BootstrapLayout layout={layout}/>
+          <BootstrapLayout layout={layout} components={components} cardsets={this.props.cardsets}
+                           datasets={this.props.datasets}/>
         </div>
       </div>
     );
@@ -30,4 +31,12 @@ class Page extends Component {
 
 }
 
+Page.PropTypes = {
+  title:      PropTypes.string.isRequired,
+  description: PropTypes.string,
+  layout:     PropTypes.object.isRequired,
+  components: PropTypes.object.isRequired,
+  cardsets:   PropTypes.object.isRequired,
+  datasets:   PropTypes.object.isRequired
+};
 export default Page;

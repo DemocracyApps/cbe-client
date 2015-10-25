@@ -29,12 +29,12 @@ CBEVars.site = [
                 "mycard": {
                   "type": "card",
                   "ids": [
-                  1
+                   17
                   ]
                 }
               },
               "componentProps": {
-                "headerTag": "0"
+                "headerTag": "1"
               },
               "componentState": [
               ]
@@ -55,12 +55,12 @@ CBEVars.site = [
                 "mycard": {
                   "type": "card",
                   "ids": [
-                  2
+                   9
                   ]
                 }
               },
               "componentProps": {
-                "headerTag": "0"
+                "headerTag": "3"
               },
               "componentState": [
               ]

@@ -2,14 +2,28 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Site from '../components/Site';
 import * as SiteActions from '../state/actions/siteActions';
+import Cardsets from '../state/derived/Cardsets';
 
+/*
+ * In this routine we generate a couple derived sets of data. The redux store only stores raw cards and
+ * datasets, but we want the cardsets and combined datasets used by components to be easily accessible.
+ * In addition, in the case of datasets, we need to actually generate the merged datasets that the 
+ * display components will use.
+ */
 function mapStateToProps(state) {
+  let componentCardsets = Cardsets.updateComponentCardsets(state.site.get('components'), state.cards);
   return {
-    counter: state.counter,
-    site: state.site
+    site: state.site,
+    cards: state.cards,
+    componentCardsets: componentCardsets,
+    componentDatasets: {} // This is a call that generates a map by component ID, then by tag to compiled data
   };
 }
 
+/*
+ * We may not need this ... I think I'm ok with just passing down the dispatcher 
+ * and letting components load action creators themselves.
+ */
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(SiteActions, dispatch);
 }

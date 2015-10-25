@@ -10,7 +10,7 @@ export default function site(state, action) {
     state = fromJS( { name: "Unknown" } );
   }
 
-  console.log("In with action " + action.type);
+  console.log("In with site action " + action.type);
   switch (action.type) {
 
     case SET_SITE_STATE:
