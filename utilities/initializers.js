@@ -37,7 +37,7 @@ function createComponent(currentId, spec, site) {
         ids: []
       };
       item.ids.forEach(function(id) {
-        component.datasets[key].ids.push(id);
+        component.datasets[key].ids.push(id+"");
       });
     }
   }

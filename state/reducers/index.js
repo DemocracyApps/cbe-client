@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import site from './site';
 import cards from './cards';
+import datasets from './datasets';
 
 const rootReducer = combineReducers({
   site,
-  cards
+  cards,
+  datasets
 });
 
 export default rootReducer;

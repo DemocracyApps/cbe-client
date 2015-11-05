@@ -3,8 +3,10 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import App from './containers/App';
 import configureStore from './state/configureStore';
-import { setSiteState, setCardsState } from './state/actions/siteActions';
+import { setSiteState, setCardsState } from './state/actions/SiteActions';
 import { initializeSite, initializeCards } from './utilities/initializers';
+import DataModels from './state/derived/DataModels';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 console.log("RUNMODE = " + __RUNMODE__);
@@ -19,6 +21,7 @@ const store = configureStore();
 // Initialize the site configuration
 store.dispatch(setSiteState(initializeSite(CBEVars.site[0].site)));
 store.dispatch(setCardsState(initializeCards(CBEVars.site[0].cards)));
+DataModels.requestAllDatasets(store.getState().site.get('components'), store.dispatch);
 
 render(
   <Provider store={store}>

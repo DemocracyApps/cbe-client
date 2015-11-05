@@ -14,7 +14,13 @@ app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output
 app.use(webpackHotMiddleware(compiler));
 
 app.get("/", function(req, res) {
+  console.log("Got a root request");
   res.sendFile(__dirname + '/index.html');
+});
+
+app.get("/api/v1/datasets/*", function (req, res) {
+  console.log("Got an API request.");
+  res.sendFile(__dirname + '/examples/testdata.json');
 });
 
 app.listen(port, function(error) {

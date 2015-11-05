@@ -1,6 +1,9 @@
 window.CBEVars = window.CBEVars || {};
 CBEVars.site = [
 {
+  "server": {
+    "apiUrl":"http://localhost:3000/api/v1"
+  },
   "site": {
     "currentPage": "Overview",
     "embedded": false,
@@ -56,6 +59,12 @@ CBEVars.site = [
                   "type": "card",
                   "ids": [
                    9
+                  ]
+                },
+                "mydataset": {
+                  "type": "dataset",
+                  "ids": [
+                   4,5,6
                   ]
                 }
               },

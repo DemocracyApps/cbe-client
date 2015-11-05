@@ -1,2 +1,0 @@
-GBEVars.data = [
-];

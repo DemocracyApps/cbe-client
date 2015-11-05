@@ -1,4 +1,4 @@
-import { SET_SITE_STATE, GOTO_PAGE } from '../actions/siteActions';
+import { SET_SITE_STATE, GOTO_PAGE } from '../actions/SiteActions';
 import { fromJS } from 'immutable';
 
 function setState (state, newState) {
