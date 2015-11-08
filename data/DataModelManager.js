@@ -37,19 +37,16 @@ class DataModelManager {
     console.log("UpdateModel for dsID " + dsId + " yields " + ready);
     if (ready) {
       let datasetList = [];
-      console.log("datasets = " + JSON.stringify(datasets));
-      model.get('datasets').forEach( (ds) => { 
-        console.log("Extracting " + ds);
-        let d = datasets.get(ds+"").get('data');
-        console.log("Resulting d = " + JSON.stringify(d.get('year')));
-        datasetList.push(d); 
-      });
-      datasetList.sort( (ds1, ds2) => {
-        return (ds1.get('year')+0) - (ds2.get('year') + 0);
-      });
-      datasetList.forEach ( (ds) => {console.log("Now order " + ds.get('year'))});
+      model.get('datasets').forEach( (ds) => { datasetList.push(datasets.get(ds+"").get('data')); });
+      datasetList.sort( (ds1, ds2) => { return (ds1.get('year')+0) - (ds2.get('year') + 0); });
+      let value = this.mergeDatasets(datasetList);
+      model = model.set('value', fromJS(value));
     }
     return model;
+  }
+
+  mergeDatasets (datasetList) {
+    return 3;
   }
 
   requestAllDatasets (dispatch) {
