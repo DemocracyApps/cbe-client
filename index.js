@@ -3,9 +3,9 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import App from './containers/App';
 import configureStore from './state/configureStore';
-import { setSiteState, setCardsState } from './state/actions/SiteActions';
+import { setSiteState, setCardsState, setDataState } from './state/actions/SiteActions';
 import { initializeSite, initializeCards } from './utilities/initializers';
-import DataModels from './state/derived/DataModels';
+import dataModelManager from './data/DataModelManager';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -18,10 +18,11 @@ if (__RUNMODE__ == 'dummy') {
 // Set up the redux store - all application state is maintained there.
 const store = configureStore();
 
-// Initialize the site configuration
-store.dispatch(setSiteState(initializeSite(CBEVars.site[0].site)));
+// Initialize the site configuration & data model requirements.
+store.dispatch(setSiteState(initializeSite(CBEVars.site[0].site, dataModelManager)));
 store.dispatch(setCardsState(initializeCards(CBEVars.site[0].cards)));
-DataModels.requestAllDatasets(store.getState().site.get('components'), store.dispatch);
+store.dispatch(setDataState(dataModelManager.getInitialModelState()));
+dataModelManager.requestAllDatasets(store.dispatch);
 
 render(
   <Provider store={store}>

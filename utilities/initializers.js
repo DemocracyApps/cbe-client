@@ -12,13 +12,13 @@ function initializeComponentClasses() {
   return components;
 }
 
-function createComponent(currentId, spec, site) {
+function createComponent(currentId, spec, site, dataModelManager) {
   // We basically clone the component spec, but also register IDs of all cards and datasets with the site.
   let component = {
     id:          currentId + "",
     componentClass: site.componentClasses[spec.componentName],
     cards:       {},
-    datasets:    {},
+    models:      {},
     properties:  {}
   };
 
@@ -33,12 +33,7 @@ function createComponent(currentId, spec, site) {
       });
     }
     else {
-      component.datasets[key] ={
-        ids: []
-      };
-      item.ids.forEach(function(id) {
-        component.datasets[key].ids.push(id+"");
-      });
+      component.models[key] = dataModelManager.registerDataModel(item.type, key, item.ids);
     }
   }
   for (let key in spec.componentProps) {
@@ -47,7 +42,7 @@ function createComponent(currentId, spec, site) {
   return component;
 }
 
-export function initializeSite (inputSite) {
+export function initializeSite (inputSite, dataModelManager) {
   // This is a global ID - we'll need to to access other parts of the state
   // associated with a component.
   let componentId = 0; 
@@ -60,7 +55,8 @@ export function initializeSite (inputSite) {
     pages:            {},
     menu:             [], 
     componentClasses:    classes,
-    components:          {}
+    components:          {},
+    requiredDatasets:     {}
   };
   // Now set up the pages, menu and component arrays.
   for (let i=0; i<inputSite.pages.length; ++i) {
@@ -95,9 +91,10 @@ export function initializeSite (inputSite) {
         // Now deal with each component in the column
         colSpec.components.forEach(function(componentSpec, componentIndex) {
           let currentId = componentId++;
-          let c = createComponent(currentId, componentSpec, site);
+          let c = createComponent(currentId, componentSpec, site, dataModelManager);
           site.components[currentId] = c;
           column.components[componentIndex] = "" + currentId;
+          for (let dsId in c.requiredDatasets) { site.requiredDatasets[dsId] = true;}
         }); // End of components forEach
         row.columns[colIndex] = column;
       }); // End of columns forEach

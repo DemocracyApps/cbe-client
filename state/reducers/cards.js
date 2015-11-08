@@ -5,7 +5,7 @@ function setState (state, newState) {
   return state.merge(newState);
 }
 
-export default function cards(state, action) {
+export default function cards(state, action, fullState = null) {
   if (state == undefined) {
     state = fromJS( { cards: {} } );
   }

@@ -3,8 +3,9 @@ import {apiFetchDatasets} from './ApiActions';
 export const GOTO_PAGE      = 'GOTO_PAGE';
 export const SET_SITE_STATE = 'SET_SITE_STATE';
 export const SET_CARDS_STATE = 'SET_CARDS_STATE';
+export const SET_DATA_STATE   = 'SET_DATA_STATE';
 export const REQUEST_DATASETS = 'REQUEST_DATASETS';
-export const RECEIVE_DATASETS = 'RECEIVE_DATASETS';
+export const RECEIVE_DATASET = 'RECEIVE_DATASET';
 
 export function setSiteState (state) {
   return {
@@ -20,10 +21,18 @@ export function setCardsState (state) {
   };
 }
 
-export function receiveDatasets (datasets) {
+export function setDataState (models) {
   return {
-    type: RECEIVE_DATASETS,
-    datasets
+    type: SET_DATA_STATE,
+    models
+  };
+}
+
+
+export function receiveDataset (dataset) {
+  return {
+    type: RECEIVE_DATASET,
+    dataset
   };
 }
 
@@ -34,37 +43,20 @@ export function requestDatasets (datasetIds) {
   };
 }
 
-function showit() {
-  alert("Hi there!");
-  return {
-    type: RECEIVE_DATASETS,
-    datasetIds: []
-  };
-}
-
 export function fetchDatasets(datasetIds, dispatch) {
   let url = CBEVars.site[0].server.apiUrl + "/datasets/" + datasetIds.join();
   console.log("The server API url is " + url);
-  //return dispatch => {
-    dispatch(requestDatasets(datasetIds));
-    return  fetch(url)
-            .then(response => response.json())
-            .then(json     => dispatch(receiveDatasets(json)));
-  //};
-  
-  // console.log("In fetchDatasets: " + JSON.stringify(datasetIds));
-  // dispatch(requestDatasets(datasetIds));
-  // dispatch ( (dispatch) => {
-  //   console.log("Inner1");
-  //   setTimeout(() => {
-  //     console.log("Inner2");
-  //     dispatch(showit());
-  //   }, 3000);
-  // });
-
-    // return fetch(`http://www.reddit.com/r/${reddit}.json`)
-    //   .then(response => response.json())
-    //   .then(json => dispatch(receivePosts(reddit, json)));
+  dispatch(requestDatasets(datasetIds));
+  return  fetch(url)
+          .then(response => response.json())
+          .then(
+            (json)     => {
+              for (let i=0; i<json.data.length; ++i) {
+                console.log("Process " + json.data[i].id);
+                dispatch(receiveDataset(json.data[i]));
+              }
+            }
+          );
 }
 
 export function gotoPage(pageId) {
