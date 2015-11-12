@@ -556,7 +556,7 @@
             "entityId": "3",
             "datasource": "Test Data Source",
             "datasourceId": "1",
-            "categoryMap": [
+            "taxonomy": [
                 {
                     "name": "Area",
                     "values": [
@@ -1100,7 +1100,7 @@
             "entityId": "3",
             "datasource": "Test Data Source",
             "datasourceId": "1",
-            "categoryMap": [
+            "taxonomy": [
                 {
                     "name": "Area",
                     "values": [

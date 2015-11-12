@@ -5,10 +5,12 @@ import Page from '../components/layout/Page';
  * Load all the available components for use
  */
 import SimpleCard from '../components/display/SimpleCard';
+import HistoryTable from '../components/display/HistoryTable';
 
 function initializeComponentClasses() {
   let components = {};
   components['SimpleCard'] = SimpleCard;
+  components['HistoryTable'] = HistoryTable;
   return components;
 }
 
@@ -21,7 +23,6 @@ function createComponent(currentId, spec, site, dataModelManager) {
     models:      {},
     properties:  {}
   };
-
   for (let key in spec.componentData) {
     let item = spec.componentData[key];
     if (item.type == 'card') {

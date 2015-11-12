@@ -15,6 +15,7 @@ import data from './data';
  * Not using Redux combineReducers because I prefer something this simple to be explicit in the code.
  */
 export default function rootReducer (state = {}, action) {
+  console.log("In with action " + action.type);
   return {
     site:   site (state.site, action),
     cards:  cards (state.cards, action),

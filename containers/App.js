@@ -16,7 +16,7 @@ function mapStateToProps(state) {
     site: state.site,
     cards: state.cards,
     componentCardsets: componentCardsets,
-    componentDatasets: {} // This is a call that generates a map by component ID, then by tag to compiled data
+    models: state.data.get('models')
   };
 }
 

@@ -53,7 +53,7 @@ CBEVars.site = [
             "class": "col-xs-4",
             "components": [
             {
-              "componentName": "SimpleCard",
+              "componentName": "HistoryTable",
               "componentData": {
                 "mycard": {
                   "type": "card",

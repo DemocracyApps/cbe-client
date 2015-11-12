@@ -32,6 +32,7 @@ class SimpleCard extends Component {
   }
 
   render() {
+    console.log("Rendering the SimpleCard");
     let configuration = this.props.configuration;
     let card = this.props.cardsets.get('mycard').get(0);
     if (card == undefined) {

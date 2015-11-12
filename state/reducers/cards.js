@@ -10,7 +10,6 @@ export default function cards(state, action, fullState = null) {
     state = fromJS( { cards: {} } );
   }
 
-  console.log("In with cards action " + action.type);
   switch (action.type) {
 
     case SET_CARDS_STATE:

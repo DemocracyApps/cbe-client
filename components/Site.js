@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Page from './layout/Page';
+import SiteNavigation from './layout/SiteNavigation';
 
 /*
  * The Site component has two roles:
@@ -7,11 +8,12 @@ import Page from './layout/Page';
  *  - It is responsible for issuing any requests for cards or datasets
  */
 class Site extends Component {
+
   render() {
     const site = this.props.site;
     const cards = this.props.cards;
     const cardsets = this.props.componentCardsets;
-    const datasets = this.props.componentDatasets;
+    const dataModels = this.props.models;
 
     let currentPage = site.get("currentPage");
     let page = site.get("pages").get(currentPage);
@@ -21,8 +23,9 @@ class Site extends Component {
     }
     return (
       <div className="container" style={styles}>
-        <Page title={page.get('title')} description={page.get('description')} layout={page.get('layout')} 
-              components={site.get('components')} cardsets={cardsets} datasets={datasets}/>
+        <SiteNavigation site={site} />
+        <Page site={site} title={page.get('title')} description={page.get('description')} layout={page.get('layout')} 
+              components={site.get('components')} cardsets={cardsets} dataModels={dataModels}/>
       </div>
     );
   }

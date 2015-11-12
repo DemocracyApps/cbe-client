@@ -11,6 +11,7 @@ class Page extends Component {
 
   render () {
     const { title, description, layout, components } = this.props;
+
     return (
       <div>
         <div className="container-fluid">
@@ -23,7 +24,7 @@ class Page extends Component {
         </div>
         <div className="container-fluid site-body">
           <BootstrapLayout layout={layout} components={components} cardsets={this.props.cardsets}
-                           datasets={this.props.datasets}/>
+                           dataModels={this.props.dataModels}/>
         </div>
       </div>
     );

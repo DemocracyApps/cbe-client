@@ -8,28 +8,29 @@ function setState (state, newState) {
 
 export default function data(state, action) {
   if (state == undefined) {
-    console.log("DATA STATE IS UNDEFINED with action type " + action.type);
-    state = fromJS( { datasets: {}, models: [] });
+    state = fromJS( { raw: {}, models: [] });
   }
 
-  console.log("In with data action " + action.type);
   switch (action.type) {
 
     case SET_DATA_STATE:
+      // Initialize the data state
       state = state.set('models', action.models);
       return state;
 
     case REQUEST_DATASETS:
+      // Just put the placeholder in for when they are received.
       action.datasetIds.map( (id) => {
-        state = state.setIn(['datasets', id], fromJS({id: id, data: null}));
+        state = state.setIn(['raw', Number(id)], fromJS({id: id, data: null}));
       });
-      console.log("After requests: " + JSON.stringify(state));
       return state;
       
     case RECEIVE_DATASET:
-      state = state.setIn(['datasets', action.dataset.id+"", 'data'], fromJS(action.dataset));
-      state = state.setIn(['models'], state.get('models').map( (model) => {
-        return dataModelManager.updateModel(model, action.dataset.id+"", state.get('datasets'));
+       // Save the dataset itself and then pass through to models for computation.
+      state = state.setIn(['raw', action.dataset.id, 'data'], fromJS(action.dataset));
+      state = state.setIn(['models'], state.get('models').map(
+        (model) => {
+          return dataModelManager.updateModel(model, action.dataset.id, state.get('raw'));
       }));
       return state;
 
