@@ -1,29 +1,23 @@
 import {apiFetchDatasets} from './ApiActions';
-
-export const GOTO_PAGE      = 'GOTO_PAGE';
-export const SET_SITE_STATE = 'SET_SITE_STATE';
-export const SET_CARDS_STATE = 'SET_CARDS_STATE';
-export const SET_DATA_STATE   = 'SET_DATA_STATE';
-export const REQUEST_DATASETS = 'REQUEST_DATASETS';
-export const RECEIVE_DATASET = 'RECEIVE_DATASET';
+import * as types from './ActionTypes';
 
 export function setSiteState (state) {
   return {
-    type: SET_SITE_STATE,
+    type: types.SET_SITE_STATE,
     state
   };
 }
 
 export function setCardsState (state) {
   return {
-    type: SET_CARDS_STATE,
+    type: types.SET_CARDS_STATE,
     state
   };
 }
 
 export function setDataState (models) {
   return {
-    type: SET_DATA_STATE,
+    type: types.SET_DATA_STATE,
     models
   };
 }
@@ -31,14 +25,14 @@ export function setDataState (models) {
 
 export function receiveDataset (dataset) {
   return {
-    type: RECEIVE_DATASET,
+    type: types.RECEIVE_DATASET,
     dataset
   };
 }
 
 export function requestDatasets (datasetIds) {
   return {
-    type: REQUEST_DATASETS,
+    type: types.REQUEST_DATASETS,
     datasetIds
   };
 }
@@ -60,7 +54,7 @@ export function fetchDatasets(datasetIds, dispatch) {
 
 export function gotoPage(pageId) {
   return {
-    type: GOTO_PAGE,
+    type: types.GOTO_PAGE,
     pageId
   };
 }

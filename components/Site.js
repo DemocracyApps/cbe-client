@@ -14,7 +14,7 @@ class Site extends Component {
     const cards = this.props.cards;
     const cardsets = this.props.componentCardsets;
     const dataModels = this.props.models;
-
+    //this.props.actions.gotoPage("hello");
     let currentPage = site.get("currentPage");
     let page = site.get("pages").get(currentPage);
     let styles = {};
@@ -25,7 +25,8 @@ class Site extends Component {
       <div className="container" style={styles}>
         <SiteNavigation site={site} />
         <Page site={site} title={page.get('title')} description={page.get('description')} layout={page.get('layout')} 
-              components={site.get('components')} cardsets={cardsets} dataModels={dataModels}/>
+              components={site.get('components')} cardsets={cardsets} dataModels={dataModels}
+              actions={this.props.actions}/>
       </div>
     );
   }

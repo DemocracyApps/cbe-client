@@ -1,4 +1,4 @@
-import { SET_CARDS_STATE } from '../actions/SiteActions';
+import { SET_CARDS_STATE } from '../actions/ActionTypes';
 import { fromJS } from 'immutable';
 
 function setState (state, newState) {

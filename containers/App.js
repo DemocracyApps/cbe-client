@@ -25,7 +25,9 @@ function mapStateToProps(state) {
  * and letting components load action creators themselves.
  */
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(SiteActions, dispatch);
+  return {
+    actions: bindActionCreators(SiteActions, dispatch)
+  };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Site);

@@ -1,0 +1,6 @@
+export const GOTO_PAGE      = 'GOTO_PAGE';
+export const SET_SITE_STATE = 'SET_SITE_STATE';
+export const SET_CARDS_STATE = 'SET_CARDS_STATE';
+export const SET_DATA_STATE   = 'SET_DATA_STATE';
+export const REQUEST_DATASETS = 'REQUEST_DATASETS';
+export const RECEIVE_DATASET = 'RECEIVE_DATASET';

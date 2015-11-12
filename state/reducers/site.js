@@ -1,4 +1,4 @@
-import { SET_SITE_STATE, GOTO_PAGE, REGISTER_RECEIVED_DATASET } from '../actions/SiteActions';
+import { SET_SITE_STATE, GOTO_PAGE, REGISTER_RECEIVED_DATASET } from '../actions/ActionTypes';
 import { fromJS } from 'immutable';
 
 function setState (state, newState) {
@@ -41,6 +41,7 @@ export default function site(state, action, fullState = null) {
       return registerDataset(state, action.datasetId);
 
     case GOTO_PAGE:
+      console.log("I am going to page: " + action.pageId);
       return state.currentPage = action.pageId;
 
     default:

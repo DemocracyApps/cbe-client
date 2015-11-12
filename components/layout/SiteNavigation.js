@@ -4,9 +4,9 @@ class SiteNavigation extends Component {
 
   render () {
     const site = this.props.site;
-    let pages = site.get('pages');
+    let pages = site.get('pages').toArray();
     let navItem = function (item, index) {
-      return <li key={index} > {index} </li>
+      return <li key={index} > {item.get('menuName')} </li>
     };
     let homeItem = function () { return <li>Home</li> }
     return (
@@ -26,7 +26,7 @@ class SiteNavigation extends Component {
                 <div id="navbar" className="navbar-collapse collapse">
 
                     <ul className="nav navbar-nav">
-                        {site.get('pages').map(navItem)}
+                        {pages.map(navItem)}
                         {homeItem()}
                     </ul>
                 </div>

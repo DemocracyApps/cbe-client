@@ -1,4 +1,4 @@
-import { RECEIVE_DATASET, REQUEST_DATASETS, SET_DATA_STATE } from '../actions/SiteActions';
+import { RECEIVE_DATASET, REQUEST_DATASETS, SET_DATA_STATE } from '../actions/ActionTypes';
 import { fromJS } from 'immutable';
 import dataModelManager from '../../data/DataModelManager';
 
