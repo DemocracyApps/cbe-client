@@ -9,7 +9,7 @@ module.exports = {
   //devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
-    'bootstrap-sass!./bootstrap-sass.config.js',
+    'bootstrap-sass!./bootstrap-sass.config.js', // https://github.com/shakacode/bootstrap-sass-loader
     './index'
   ],
   output: {
