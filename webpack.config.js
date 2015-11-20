@@ -38,6 +38,9 @@ module.exports = {
       test: /\.css?$/,
       loaders: ['style', 'raw'],
       include: __dirname
+    }, {
+      test: /\.less$/,
+      loader: "style!css!less"
     },
     { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,   loader: "url?limit=10000&minetype=application/font-woff" },
     { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,  loader: "url?limit=10000&minetype=application/font-woff" },
