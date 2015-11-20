@@ -7,8 +7,6 @@ import { setSiteState, setCardsState, setDataState } from './state/actions/SiteA
 import { initializeSite, initializeCards } from './utilities/initializers';
 import dataModelManager from './data/DataModelManager';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 console.log("RUNMODE = " + __RUNMODE__);
 
 if (__RUNMODE__ == 'dummy') {

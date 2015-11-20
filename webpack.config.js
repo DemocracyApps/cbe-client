@@ -9,6 +9,7 @@ module.exports = {
   //devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
+    'bootstrap-sass!./bootstrap-sass.config.js',
     './index'
   ],
   output: {
@@ -32,6 +33,12 @@ module.exports = {
       test: /\.css?$/,
       loaders: ['style', 'raw'],
       include: __dirname
-    }]
+    },
+    { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,   loader: "url?limit=10000&minetype=application/font-woff" },
+    { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,  loader: "url?limit=10000&minetype=application/font-woff" },
+    { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,    loader: "url?limit=10000&minetype=application/octet-stream" },
+    { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,    loader: "file" },
+    { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,    loader: "url?limit=10000&minetype=image/svg+xml" }    
+    ]
   }
 };
