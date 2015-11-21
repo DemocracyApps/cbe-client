@@ -76,8 +76,22 @@ class DataModelManager {
     }
 
     let mergedData = this.extractFromTree(tree, threshold);
-
-    return mergedData;
+    // We'll take the category names from the first dataset
+    let categoryHeaders = datasetList[0].get('taxonomy').map((catItem) => {
+      return catItem.get('name');
+    }).toArray();
+    let dataHeaders = [];
+    let dataPeriods = [];
+    datasetList.forEach((ds) => {
+      dataHeaders.push(ds.get('name'));
+      dataPeriods.push(ds.get('year'));
+    })
+    return {
+      categoryHeaders,
+      dataHeaders,
+      dataPeriods,
+      data: mergedData
+    };
   }
 
   /*
@@ -128,6 +142,17 @@ class DataModelManager {
       let datasetList = model.get('datasets').map( (ds) => { return datasets.get(ds).get('data'); }).toArray();
       datasetList.sort( (ds1, ds2) => { return (Number(ds1.get('year')) - Number(ds2.get('year'))); });
       model = model.set('value', fromJS(this.mergeDatasets(datasetList, null, 0.0)));
+
+            // return {
+            //     //categories:this.initializationParameters.hierarchy,
+            //     categories:this.hierarchy,
+            //     dataHeaders:headers,
+            //     periods:headers,
+            //     levelsDown: startLevel,
+            //     //levelsAggregated: this.initializationParameters.hierarchy.length - nLevels - startLevel,
+            //     levelsAggregated: this.hierarchy.length - nLevels - startLevel,
+            //     data: data
+            // };
     }
     return model;
   }

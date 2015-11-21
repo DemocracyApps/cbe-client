@@ -18,6 +18,7 @@ class HistoryTable extends Component {
               </div>)
     }
     else {
+      console.log("Here's the table! " + JSON.stringify(dataset.get('dataPeriods')));
       return (
         <div className="row">
           <h1>History Table </h1>
