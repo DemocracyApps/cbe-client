@@ -115,6 +115,9 @@ class DataModelManager {
   }
 
   updateModel(model, dsId, datasets) {
+    if (! model.get('datasets').includes(dsId)) { // Nothing to do if dsId isn't part of this model
+      return model;
+    }
     // We only compute the merge if we have all the constituent datasets for now.
     let ready = model.get('datasets').reduce (
       function (accum, dsId) {

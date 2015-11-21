@@ -34,6 +34,12 @@ CBEVars.site = [
                   "ids": [
                    17
                   ]
+                },
+                "mydataset": {
+                  "type": "dataset",
+                  "ids": [
+                   88
+                  ]
                 }
               },
               "componentProps": {
