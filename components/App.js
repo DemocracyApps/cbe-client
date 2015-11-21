@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Site from '../components/Site';
+import Site from './Site';
 import * as SiteActions from '../state/actions/SiteActions';
 import Cardsets from '../state/derived/Cardsets';
 
