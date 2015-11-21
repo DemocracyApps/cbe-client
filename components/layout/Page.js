@@ -11,7 +11,6 @@ class Page extends Component {
 
   render () {
     const { title, description, layout, components, actions } = this.props;
-    // actions.gotoPage('abc');
     return (
       <div>
         <div className="container-fluid">

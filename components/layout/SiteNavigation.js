@@ -7,15 +7,19 @@ class SiteNavigation extends Component {
   render () {
     const site = this.props.site;
     let pages = site.get('pages').toArray();
-    // let pages = [
-    //     {menuName: "Overview"},
-    //     {menuName: "Show Me"},
-    //     {menuName: "Breakdown"}
-    // ];
     let navItem = function (item, index) {
-      return <li key={index} > <a id="menuPage{index}" href="#">{item.get('menuName')}</a> </li>
+      var selectPage = function(e) {
+        this.props.actions.gotoPage(item.get('shortName'));
+      }.bind(this);
+      return <li key={index} > <a id="menuPage{index}" 
+                                  onClick={selectPage}
+                                  href="#">{item.get('menuName')}</a> </li>
     };
-    let homeItem = function () { return <li><a href="#"> <i style={{float:"right"}}  className="fa fa-home"></i></a> </li> }
+    let homeItem = function () { return (
+        <li> 
+            <a href="#"><i style={{float:"right"}}  className="fa fa-home"></i></a>
+        </li>
+    );}
     return (
         <nav className="navbar navbar-default">
             <div className="container-fluid">
@@ -33,7 +37,7 @@ class SiteNavigation extends Component {
                 <div id="navbar" className="navbar-collapse collapse">
 
                     <ul className="nav navbar-nav">
-                        {pages.map(navItem)}
+                        {pages.map(navItem,this)}
                         {homeItem()}
                     </ul>
                 </div>

@@ -16,9 +16,10 @@ import data from './data';
  */
 export default function rootReducer (state = {}, action) {
   console.log("In with action " + action.type);
-  return {
+  let newState = {
     site:   site (state.site, action),
     cards:  cards (state.cards, action),
     data:   data (state.data, action)
-  }
+  };
+  return newState;
 }

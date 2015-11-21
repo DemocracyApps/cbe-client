@@ -14,8 +14,8 @@ class Site extends Component {
     const cards = this.props.cards;
     const cardsets = this.props.componentCardsets;
     const dataModels = this.props.models;
-    //this.props.actions.gotoPage("hello");
     let currentPage = site.get("currentPage");
+    console.log("The current page is now " + currentPage);
     let page = site.get("pages").get(currentPage);
     let styles = {};
     if (this.props.site.maxWidth) {
@@ -23,7 +23,7 @@ class Site extends Component {
     }
     return (
       <div className="container" style={styles}>
-        <SiteNavigation site={site} />
+        <SiteNavigation site={site} actions={this.props.actions}/>
         <Page site={site} title={page.get('title')} description={page.get('description')} layout={page.get('layout')} 
               components={site.get('components')} cardsets={cardsets} dataModels={dataModels}
               actions={this.props.actions}/>

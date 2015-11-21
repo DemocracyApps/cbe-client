@@ -42,7 +42,7 @@ export default function site(state, action, fullState = null) {
 
     case GOTO_PAGE:
       console.log("I am going to page: " + action.pageId);
-      return state.currentPage = action.pageId;
+      return state.set('currentPage', action.pageId);
 
     default:
       return state;
