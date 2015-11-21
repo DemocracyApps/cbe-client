@@ -6,12 +6,15 @@ class SiteNavigation extends Component {
 
   render () {
     const site = this.props.site;
+    const currentPage = this.props.site.get('currentPage');
     let pages = site.get('pages').toArray();
     let navItem = function (item, index) {
       var selectPage = function(e) {
         this.props.actions.gotoPage(item.get('shortName'));
       }.bind(this);
-      return <li key={index} > <a id="menuPage{index}" 
+      let itemClass = (item.get('shortName') == currentPage)?"active":"";
+
+      return <li key={index} className={itemClass} > <a id="menuPage{index}" 
                                   onClick={selectPage}
                                   href="#">{item.get('menuName')}</a> </li>
     };
@@ -32,7 +35,7 @@ class SiteNavigation extends Component {
                         <span className="icon-bar"></span>
                     </button>
                     <a className="navbar-brand" href="#" onClick={this.goHome}>
-                        <span style={{fontWeight:"600"}}>{this.props.site.name}</span></a>
+                        <span style={{fontWeight:"600"}}>{site.get('name')}</span></a>
                 </div>
                 <div id="navbar" className="navbar-collapse collapse">
 

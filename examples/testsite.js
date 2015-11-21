@@ -79,6 +79,24 @@ CBEVars.site = [
           ]
         }]
       } // Layout
+    }, {
+      "title": "Show Me The Money!",
+      "shortName": "ShowMe",
+      "menuName": "ShowMe",
+      "description": "This is just a test page.",
+      "layout": {
+        "rows": [
+        {
+          "columns": [
+            {
+              "id": "Nothing",
+              "class": "col-xs-8",
+              "components":[]
+            }
+          ]
+        }
+        ]
+      }      
     }] // Pages
   },
   "cards": [
