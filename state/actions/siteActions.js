@@ -59,3 +59,9 @@ export function gotoPage(pageId) {
   };
 }
 
+export function setComponentState(stateValue) {
+  return {
+    type: types.SET_COMPONENT_STATE,
+    stateValue
+  }
+}

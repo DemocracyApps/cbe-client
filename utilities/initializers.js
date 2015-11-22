@@ -6,11 +6,13 @@ import Page from '../components/layout/Page';
  */
 import SimpleCard from '../components/display/SimpleCard';
 import HistoryTable from '../components/display/HistoryTable';
+import ShowMePage from '../components/display/ShowMePage/ShowMePage';
 
 function initializeComponentClasses() {
   let components = {};
   components['SimpleCard'] = SimpleCard;
   components['HistoryTable'] = HistoryTable;
+  components['ShowMePage'] = ShowMePage;
   return components;
 }
 
@@ -21,7 +23,8 @@ function createComponent(currentId, spec, site, dataModelManager) {
     componentClass: site.componentClasses[spec.componentName],
     cards:       {},
     models:      {},
-    properties:  {}
+    properties:  {},
+    state:       {}
   };
   for (let key in spec.componentData) {
     let item = spec.componentData[key];
@@ -34,12 +37,18 @@ function createComponent(currentId, spec, site, dataModelManager) {
       });
     }
     else {
-      component.models[key] = dataModelManager.registerDataModel(item.type, key, item.ids);
+      if (item.ids.length > 0) { // Don't register models with no data
+        component.models[key] = dataModelManager.registerDataModel(item.type, key, item.ids);
+      }
+      else {
+        console.log("Component " + spec.componentName + ": dataset " + key + " dropped - no data.");
+      }
     }
   }
   for (let key in spec.componentProps) {
     component.properties[key] = spec.componentProps[key];
   }
+  component.state = spec.componentState;
   return component;
 }
 

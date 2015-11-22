@@ -11,13 +11,14 @@ class BootstrapLayout extends Component {
     });
     return React.createElement(comp, {
         key: index,
+        componentId,
         configuration: component.get('properties'),
         cardsets: cardsets,
-        dataModels: myModels,
-        actions: null
+        datasets: myModels,
+        componentState: component.get('state'),
+        actions: this.props.actions
     });
   }
-
 
   buildColumn (column, index) {
     var clist = column.get('components').toArray();
@@ -31,7 +32,7 @@ class BootstrapLayout extends Component {
 
   buildRow (row, index) {
     return (
-      <div key={"row_" + index} className="row">
+      <div key={"row_" + index} className="row" style={{margin:0}}>
           { row.get('columns').map(this.buildColumn, this) }
       </div>
     );

@@ -4,13 +4,13 @@ class HistoryTable extends Component {
 
   shouldComponentUpdate (nextProps, nextState) {
     let result = (nextProps.cardsets !== this.props.cardsets ||
-                  nextProps.dataModels !== this.props.dataModels);
+                  nextProps.datasets !== this.props.datasets);
     return result;
   }
 
   render() {
     let configuration = this.props.configuration;
-    let dataset = this.props.dataModels.get('mydataset').get('value');
+    let dataset = this.props.datasets.get('mydataset').get('value');
     if (dataset == undefined || dataset == null) {
       return (<div>
                 <h1>History Table </h1>

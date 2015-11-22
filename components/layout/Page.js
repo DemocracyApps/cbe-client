@@ -23,7 +23,7 @@ class Page extends Component {
         </div>
         <div className="container-fluid site-body">
           <BootstrapLayout layout={layout} components={components} cardsets={this.props.cardsets}
-                           dataModels={this.props.dataModels}/>
+                           dataModels={this.props.dataModels} actions={this.props.actions}/>
         </div>
       </div>
     );

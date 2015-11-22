@@ -1,4 +1,4 @@
-import { SET_SITE_STATE, GOTO_PAGE, REGISTER_RECEIVED_DATASET } from '../actions/ActionTypes';
+import { SET_SITE_STATE, GOTO_PAGE, REGISTER_RECEIVED_DATASET, SET_COMPONENT_STATE } from '../actions/ActionTypes';
 import { fromJS } from 'immutable';
 
 function setState (state, newState) {
@@ -43,6 +43,12 @@ export default function site(state, action, fullState = null) {
     case GOTO_PAGE:
       console.log("I am going to page: " + action.pageId);
       return state.set('currentPage', action.pageId);
+
+    case SET_COMPONENT_STATE:
+      let newState = state.setIn(['components', (action.stateValue.componentId),
+                                  'state', action.stateValue.variableName, "value"], 
+                                 fromJS(action.stateValue.value));
+      return newState;
 
     default:
       return state;

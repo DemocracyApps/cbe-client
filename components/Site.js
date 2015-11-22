@@ -15,7 +15,6 @@ class Site extends Component {
     const cardsets = this.props.componentCardsets;
     const dataModels = this.props.models;
     let currentPage = site.get("currentPage");
-    console.log("The current page is now " + currentPage);
     let page = site.get("pages").get(currentPage);
     let styles = {};
     if (this.props.site.maxWidth) {

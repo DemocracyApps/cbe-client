@@ -5,7 +5,7 @@ CBEVars.site = [
     "apiUrl":"http://localhost:3000/api/v1"
   },
   "site": {
-    "currentPage": "Overview",
+    "currentPage": "ShowMe",
     "embedded": false,
     "name": "Asheville, NC Budget 2015-2016",
     "slug": "asheville",
@@ -89,15 +89,60 @@ CBEVars.site = [
       "title": "Show Me The Money!",
       "shortName": "ShowMe",
       "menuName": "ShowMe",
-      "description": "This is just a test page.",
+      "description": "This is the ShowMe page.",
       "layout": {
         "rows": [
         {
           "columns": [
             {
               "id": "Nothing",
-              "class": "col-xs-8",
-              "components":[]
+              "class": "col-xs-12",
+              "components":[
+                {
+                  "componentName": "ShowMePage",
+                  "componentData": {
+                    "spending": {
+                      "type": "dataset",
+                      "ids": [
+                       6,4,5
+                      ]
+                    },
+                    "revenue": {
+                      "type": "dataset",
+                      "ids": [4,5]
+                    }
+                  },
+                  "componentProps": {
+                    "startYear": "1"
+                  },
+                  "componentState": {
+                    "accountType": {
+                      "type": "string",
+                      "array": false,
+                      "value": "Spending",
+                      "allowedValues": ["Spending", "Revenue"]
+                    },
+                    "displayMode": {
+                      "type": "string",
+                      "array": false,
+                      "value":"chart",
+                      "allowedValues": ["chart", "table"]
+                    },
+                    "year": {
+                      "type": "number",
+                      "array": false,
+                      "value": null,
+                      "allowedValues": null
+                    },
+                    "detailLevel": {
+                      "type": "number",
+                      "array": false,
+                      "value": 1,
+                      "allowedValues": null
+                    }
+                  }
+                }
+              ]
             }
           ]
         }
