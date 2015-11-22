@@ -1,66 +1,73 @@
 import React, { Component, PropTypes } from 'react';
-import OptionsPanel from './OptionsPanel';
+//import OptionsPanel from './OptionsPanel';
+import ToggleButtonSet from '../ToggleButtonSet';
 
 class ShowMePage extends Component {
 
-  pageSetup (componentId, configuration, componentState, actions) {
-    // See if datasets are ready and set up Spending/Revenue toggles if appropriate
-    let spending = this.props.datasets.get('spending'), revenue = this.props.datasets.get('revenue');
-    let ready = true, active = null;
+  buttonSpec (name, actionValue, active, actions) {
+    return {
+      name,
+      action: actions.setComponentState,
+      actionValue,
+      active
+    };
+  }
+
+  accountTypesSpec (componentId, componentState, actions, doSpending, doRevenue) {
     let accountTypes = [];
-    if (spending != null) {
-      active = (componentState.get('accountType').get("value") == "Spending");
-      accountTypes.push({
-        name: "Spending",
-        action: actions.setComponentState,
-        actionValue: { componentId, variableName: "accountType", value: "Spending"},
-        active
-      });
+    if (doSpending) {
+      accountTypes.push(this.buttonSpec("Spending",
+                          {componentId, variableName:'accountType', value:'Spending'},
+                          (componentState.get('accountType').get("value") == "Spending"),
+                          actions));
     }
-    if (revenue != null) {
-      active = (componentState.get('accountType').get("value") == "Revenue");
-      accountTypes.push({
-        name: "Revenue",
-        action: actions.setComponentState,
-        actionValue: { componentId, variableName: "accountType", value: "Revenue"},
-        active
-      });
+    if (doRevenue) {
+      accountTypes.push(this.buttonSpec("Revenue",
+                          {componentId, variableName:'accountType', value:'Revenue'},
+                          (componentState.get('accountType').get("value") == "Revenue"),
+                          actions));
     }
-    if (spending != null && spending.get('value') == null) ready = false;
-    if (revenue != null && revenue.get('value') == null) ready = false;
-    if (accountTypes.length < 1) ready = false;
+    return accountTypes;
+  }
+
+  displayModesSpec (componentId, componentState, actions) {
 
     // Set up the display modes
     let displayModes = [];
-    displayModes.push({
-      name: "Chart",
-      action: actions.setComponentState,
-      actionValue: { componentId, variableName: 'displayMode', value: "Chart"},
-      active: (componentState.get('displayMode').get("value") == "Chart")
-    });
-    displayModes.push({
-      name: "Table",
-      action: actions.setComponentState,
-      actionValue: { componentId, variableName: 'displayMode', value: "Table"},
-      active: (componentState.get('displayMode').get("value") == "Table")
-    });
-    return {
-      ready,
-      accountTypes,
-      displayModes
-    }
+    displayModes.push(this.buttonSpec("Chart",
+                        {componentId, variableName: 'displayMode', value: "Chart"},
+                        (componentState.get('displayMode').get("value") == "Chart"),
+                        actions));
+    displayModes.push(this.buttonSpec("Table",
+                        {componentId, variableName: 'displayMode', value: "Table"},
+                        (componentState.get('displayMode').get("value") == "Table"),
+                        actions));
+    return displayModes;
   }
 
   render() {
-    //console.log("componentState = " + JSON.stringify(this.props.componentState));
-    let setup = this.pageSetup(this.props.componentId, this.props.configuration, 
-                               this.props.componentState, this.props.actions);
+    let spending = this.props.datasets.get('spending');
+    let revenue = this.props.datasets.get('revenue');
+    let accountTypes = this.accountTypesSpec(this.props.componentId, this.props.componentState, 
+                                             this.props.actions, spending != null, revenue != null);
+    let displayModes = this.displayModesSpec(this.props.componentId, this.props.componentState, this.props.actions);
 
-    if (setup.ready) {
+    let ready = true;
+    if ((spending != null && spending.get('value') == null) ||
+        (revenue  != null && revenue.get('value')  == null) ||
+        (accountTypes.length == 0)) ready = false;
+
+    let typeButtons = (accountTypes.length > 1)?(<ToggleButtonSet columns="3" options={accountTypes}/>):"";
+    let modeButtons = (displayModes.length > 1)?(<ToggleButtonSet columns="3" options={displayModes}/>):"";
+
+    if (ready) {
       return (
         <div>
-          <OptionsPanel accountTypes={setup.accountTypes} displayModes={setup.displayModes} 
-                        actions={this.props.actions}/>
+          <div>
+            {typeButtons}
+            {modeButtons}
+            <p>I am the options panel </p>
+          </div>
         </div>
       );
     }
