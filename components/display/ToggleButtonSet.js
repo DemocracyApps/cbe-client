@@ -39,7 +39,7 @@ class ToggleButtonSet extends Component {
 
 ToggleButtonSet.defaultProps = {
   columns: 4,
-  title: "Account Type"
+  title: "ToggleButtonSet"
 }
 
 export default ToggleButtonSet;

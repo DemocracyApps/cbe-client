@@ -4,11 +4,12 @@ import OptionsPanel from './OptionsPanel';
 class ShowMePage extends Component {
 
   pageSetup (componentId, configuration, componentState, actions) {
+    // See if datasets are ready and set up Spending/Revenue toggles if appropriate
     let spending = this.props.datasets.get('spending'), revenue = this.props.datasets.get('revenue');
-    let ready = true;
+    let ready = true, active = null;
     let accountTypes = [];
     if (spending != null) {
-      let active = (componentState.get('accountType').get("value") == "Spending");
+      active = (componentState.get('accountType').get("value") == "Spending");
       accountTypes.push({
         name: "Spending",
         action: actions.setComponentState,
@@ -17,32 +18,49 @@ class ShowMePage extends Component {
       });
     }
     if (revenue != null) {
-      let active = (componentState.get('accountType').get("value") == "Revenue");
+      active = (componentState.get('accountType').get("value") == "Revenue");
       accountTypes.push({
         name: "Revenue",
         action: actions.setComponentState,
-        actionValue: { componentId, variableName  : "accountType", value: "Revenue"},
+        actionValue: { componentId, variableName: "accountType", value: "Revenue"},
         active
       });
     }
     if (spending != null && spending.get('value') == null) ready = false;
     if (revenue != null && revenue.get('value') == null) ready = false;
     if (accountTypes.length < 1) ready = false;
+
+    // Set up the display modes
+    let displayModes = [];
+    displayModes.push({
+      name: "Chart",
+      action: actions.setComponentState,
+      actionValue: { componentId, variableName: 'displayMode', value: "Chart"},
+      active: (componentState.get('displayMode').get("value") == "Chart")
+    });
+    displayModes.push({
+      name: "Table",
+      action: actions.setComponentState,
+      actionValue: { componentId, variableName: 'displayMode', value: "Table"},
+      active: (componentState.get('displayMode').get("value") == "Table")
+    });
     return {
       ready,
-      accountTypes
+      accountTypes,
+      displayModes
     }
   }
 
   render() {
-    console.log("componentState = " + JSON.stringify(this.props.componentState));
+    //console.log("componentState = " + JSON.stringify(this.props.componentState));
     let setup = this.pageSetup(this.props.componentId, this.props.configuration, 
                                this.props.componentState, this.props.actions);
 
     if (setup.ready) {
       return (
         <div>
-          <OptionsPanel accountTypes={setup.accountTypes} actions={this.props.actions}/>
+          <OptionsPanel accountTypes={setup.accountTypes} displayModes={setup.displayModes} 
+                        actions={this.props.actions}/>
         </div>
       );
     }

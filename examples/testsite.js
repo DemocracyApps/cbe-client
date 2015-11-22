@@ -125,8 +125,8 @@ CBEVars.site = [
                     "displayMode": {
                       "type": "string",
                       "array": false,
-                      "value":"chart",
-                      "allowedValues": ["chart", "table"]
+                      "value":"Chart",
+                      "allowedValues": ["Chart", "Table"]
                     },
                     "year": {
                       "type": "number",

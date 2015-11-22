@@ -45,6 +45,7 @@ export default function site(state, action, fullState = null) {
       return state.set('currentPage', action.pageId);
 
     case SET_COMPONENT_STATE:
+      console.log("Setting new component state " + JSON.stringify(action.stateValue));
       let newState = state.setIn(['components', (action.stateValue.componentId),
                                   'state', action.stateValue.variableName, "value"], 
                                  fromJS(action.stateValue.value));
