@@ -105,9 +105,9 @@ class ShowMePage extends Component {
       return (
         <div>
           <div>
-            {typeButtons}
-            {modeButtons}
-            <ToggleButtonSet columns="4" options={selectorList}/>
+            {(accountTypes.length > 1)?(<ToggleButtonSet columns="3" options={accountTypes}/>):""}
+            {(displayModes.length > 1)?(<ToggleButtonSet columns="3" options={displayModes}/>):""}
+            <ToggleButtonSet columns="6" options={selectorList}/>
           </div>
         </div>
       );
