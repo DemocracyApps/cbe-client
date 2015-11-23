@@ -31,8 +31,6 @@ class ShowMePage extends Component {
   }
 
   displayModesSpec (componentId, componentState, actions) {
-
-    // Set up the display modes
     let displayModes = [];
     displayModes.push(this.buttonSpec("Chart",
                         {componentId, variableName: 'displayMode', value: "Chart"},
@@ -47,11 +45,9 @@ class ShowMePage extends Component {
 
   yearSelectorSpec (componentId, configuration, componentState, actions, data) {
     let years = data.get('value').get('dataPeriods').toArray();
-    console.log("In yearSelectorSpec: " + JSON.stringify(years));
     let activeIndex = (configuration.get('startYear')==0)?0:years.length-1;
     if (componentState.get('year').get('value') != null) {
       activeIndex = years.indexOf(componentState.get('year').get('value'));
-      console.log("Setting activeIndex to " + activeIndex);
     }
 
     let yearOptions = [];
@@ -64,10 +60,19 @@ class ShowMePage extends Component {
     });
     return yearOptions;
   }
-  
+
   categorySelectorSpec (componentId, componentState, actions, data) {
-    let categories = data.get('value').get('categoryHeaders').toArray();
-    console.log("In categorySelectorSpec: " + JSON.stringify(categories));
+    let activeIndex = componentState.get('detailLevel').get('value');
+
+    let categoryOptions = [];
+    data.get('value').get('categoryHeaders').forEach( (category, index) => {
+      let active = false;
+      if (index == activeIndex) active = true
+      categoryOptions.push(this.buttonSpec("" + category,
+                        {componentId, variableName: 'detailLevel', value: index},
+                        active, actions));
+    });
+    return categoryOptions;
   }
 
   render() {
@@ -95,7 +100,7 @@ class ShowMePage extends Component {
       }
       else { // Table
         // Build the category selector
-        selectorList = this.categorySelectorSpec(componentId, configuration, componentState, actions, data);
+        selectorList = this.categorySelectorSpec(componentId, componentState, actions, data);
       }
       return (
         <div>

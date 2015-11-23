@@ -137,7 +137,7 @@ CBEVars.site = [
                     "detailLevel": {
                       "type": "number",
                       "array": false,
-                      "value": 1,
+                      "value": 0,
                       "allowedValues": null
                     }
                   }
