@@ -91,23 +91,23 @@ class ShowMePage extends Component {
     if (ready) {
       let data = (spending == null)?revenue:spending;
       if (componentState.get('accountType').get("value") == "Revenue") data = revenue;
-      let typeButtons = (accountTypes.length > 1)?(<ToggleButtonSet columns="3" options={accountTypes}/>):"";
-      let modeButtons = (displayModes.length > 1)?(<ToggleButtonSet columns="3" options={displayModes}/>):"";
-      let selectorList = null;
+      let selectorList = null, selectorTitle = null;
       if (componentState.get('displayMode').get('value') == 'Chart') {
         // Build the year selector
+        selectorTitle = 'Year';
         selectorList = this.yearSelectorSpec(componentId, configuration, componentState, actions, data);
       }
       else { // Table
         // Build the category selector
+        selectorTitle = 'Detail Level';
         selectorList = this.categorySelectorSpec(componentId, componentState, actions, data);
       }
       return (
         <div>
           <div>
-            {(accountTypes.length > 1)?(<ToggleButtonSet columns="3" options={accountTypes}/>):""}
-            {(displayModes.length > 1)?(<ToggleButtonSet columns="3" options={displayModes}/>):""}
-            <ToggleButtonSet columns="6" options={selectorList}/>
+            {(accountTypes.length > 1)?(<ToggleButtonSet title='Account Type' columns="3" options={accountTypes}/>):""}
+            {(displayModes.length > 1)?(<ToggleButtonSet title='Display' columns="3" options={displayModes}/>):""}
+            <ToggleButtonSet title={selectorTitle} columns="6" options={selectorList}/>
           </div>
         </div>
       );
