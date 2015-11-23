@@ -45,34 +45,70 @@ class ShowMePage extends Component {
     return displayModes;
   }
 
+  yearSelectorSpec (componentId, configuration, componentState, actions, data) {
+    let years = data.get('value').get('dataPeriods').toArray();
+    console.log("In yearSelectorSpec: " + JSON.stringify(years));
+    let activeIndex = (configuration.get('startYear')==0)?0:years.length-1;
+    if (componentState.get('year').get('value') != null) {
+      activeIndex = years.indexOf(componentState.get('year').get('value'));
+      console.log("Setting activeIndex to " + activeIndex);
+    }
+
+    let yearOptions = [];
+    data.get('value').get('dataPeriods').forEach( (year, index) => {
+      let active = false;
+      if (index == activeIndex) active = true
+      yearOptions.push(this.buttonSpec("" + year,
+                        {componentId, variableName: 'year', value: year},
+                        active, actions));
+    });
+    return yearOptions;
+  }
+  
+  categorySelectorSpec (componentId, componentState, actions, data) {
+    let categories = data.get('value').get('categoryHeaders').toArray();
+    console.log("In categorySelectorSpec: " + JSON.stringify(categories));
+  }
+
   render() {
-    let spending = this.props.datasets.get('spending');
-    let revenue = this.props.datasets.get('revenue');
-    let accountTypes = this.accountTypesSpec(this.props.componentId, this.props.componentState, 
-                                             this.props.actions, spending != null, revenue != null);
-    let displayModes = this.displayModesSpec(this.props.componentId, this.props.componentState, this.props.actions);
+    const { datasets, componentId, configuration, componentState, actions } = this.props;
+    let spending = datasets.get('spending');
+    let revenue  = datasets.get('revenue');
+    let accountTypes = this.accountTypesSpec(componentId, componentState, 
+                                             actions, spending != null, revenue != null);
+    let displayModes = this.displayModesSpec(componentId, componentState, actions);
 
     let ready = true;
     if ((spending != null && spending.get('value') == null) ||
         (revenue  != null && revenue.get('value')  == null) ||
         (accountTypes.length == 0)) ready = false;
 
-    let typeButtons = (accountTypes.length > 1)?(<ToggleButtonSet columns="3" options={accountTypes}/>):"";
-    let modeButtons = (displayModes.length > 1)?(<ToggleButtonSet columns="3" options={displayModes}/>):"";
-
     if (ready) {
+      let data = (spending == null)?revenue:spending;
+      if (componentState.get('accountType').get("value") == "Revenue") data = revenue;
+      let typeButtons = (accountTypes.length > 1)?(<ToggleButtonSet columns="3" options={accountTypes}/>):"";
+      let modeButtons = (displayModes.length > 1)?(<ToggleButtonSet columns="3" options={displayModes}/>):"";
+      let selectorList = null;
+      if (componentState.get('displayMode').get('value') == 'Chart') {
+        // Build the year selector
+        selectorList = this.yearSelectorSpec(componentId, configuration, componentState, actions, data);
+      }
+      else { // Table
+        // Build the category selector
+        selectorList = this.categorySelectorSpec(componentId, configuration, componentState, actions, data);
+      }
       return (
         <div>
           <div>
             {typeButtons}
             {modeButtons}
-            <p>I am the options panel </p>
+            <ToggleButtonSet columns="4" options={selectorList}/>
           </div>
         </div>
       );
     }
     else {
-      return (<div> I am not yet ready </div>);
+      return (<div> <p>Page is loading ...</p> </div>);
     }
   }
 }
