@@ -22,7 +22,7 @@ class HistoryTable extends Component {
       console.log("HistoryTable: detailLevel = " + detailLevel);
       // This will only recompute when necessary
       let rows = cache.computeArtifact( myId, 'processedData',
-                                        {data: rawData, detailLevel, startPath: null},
+                                        {data: rawData, detailLevel},
                                         DatasetUtilities.extractHierarchy);
       let thStyle={textAlign:"right"};
       console.log("Here's the table! " + JSON.stringify(headers));
