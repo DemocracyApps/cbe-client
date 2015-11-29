@@ -1,8 +1,59 @@
 import React, { Component, PropTypes } from 'react';
 //import OptionsPanel from './OptionsPanel';
 import ToggleButtonSet from '../ToggleButtonSet';
+import HistoryTable from '../HistoryTable';
 
 class ShowMePage extends Component {
+
+  render() {
+    const { datasets, componentId, configuration, componentState, actions } = this.props;
+    let spending = datasets.get('spending');
+    let revenue  = datasets.get('revenue');
+    let accountTypes = this.accountTypesSpec(componentId, componentState, 
+                                             actions, spending != null, revenue != null);
+    let displayModes = this.displayModesSpec(componentId, componentState, actions);
+
+    let ready = true;
+    if ((spending != null && spending.get('value') == null) ||
+        (revenue  != null && revenue.get('value')  == null) ||
+        (accountTypes.length == 0)) ready = false;
+
+    if (ready) {
+      let data = (spending == null)?revenue:spending;
+      //data.get('func')('USA!');
+      if (componentState.get('accountType').get("value") == "Revenue") data = revenue;
+      let selectorList = null, selectorTitle = null;
+      let mainComponent = "";
+      if (componentState.get('displayMode').get('value') == 'Chart') {
+        // Build the year selector
+        selectorTitle = 'Year';
+        selectorList = this.yearSelectorSpec(componentId, configuration, componentState, actions, data);
+        mainComponent = (<HistoryTable data={data.get('value')} componentId={componentId} childId="-0"/>);
+      }
+      else { // Table
+        // Build the category selector
+        selectorTitle = 'Detail Level';
+        selectorList = this.categorySelectorSpec(componentId, componentState, actions, data);
+        mainComponent = (<HistoryTable data={data.get('value')} 
+                                       detailLevel={componentState.get('detailLevel').get('value')}
+                                       componentId={componentId} childId="-1"/>);
+      }
+
+      return (
+        <div>
+          <div>
+            {(accountTypes.length > 1)?(<ToggleButtonSet title='Account Type' columns="3" options={accountTypes}/>):""}
+            {(displayModes.length > 1)?(<ToggleButtonSet title='Display' columns="3" options={displayModes}/>):""}
+            <ToggleButtonSet title={selectorTitle} columns="6" options={selectorList}/>
+          </div>
+          {mainComponent}
+        </div>
+      );
+    }
+    else {
+      return (<div> <p>Page is loading ...</p> </div>);
+    }
+  }
 
   buttonSpec (name, actionValue, active, actions) {
     return {
@@ -73,48 +124,6 @@ class ShowMePage extends Component {
                         active, actions));
     });
     return categoryOptions;
-  }
-
-  render() {
-    const { datasets, componentId, configuration, componentState, actions } = this.props;
-    let spending = datasets.get('spending');
-    let revenue  = datasets.get('revenue');
-    let accountTypes = this.accountTypesSpec(componentId, componentState, 
-                                             actions, spending != null, revenue != null);
-    let displayModes = this.displayModesSpec(componentId, componentState, actions);
-
-    let ready = true;
-    if ((spending != null && spending.get('value') == null) ||
-        (revenue  != null && revenue.get('value')  == null) ||
-        (accountTypes.length == 0)) ready = false;
-
-    if (ready) {
-      let data = (spending == null)?revenue:spending;
-      if (componentState.get('accountType').get("value") == "Revenue") data = revenue;
-      let selectorList = null, selectorTitle = null;
-      if (componentState.get('displayMode').get('value') == 'Chart') {
-        // Build the year selector
-        selectorTitle = 'Year';
-        selectorList = this.yearSelectorSpec(componentId, configuration, componentState, actions, data);
-      }
-      else { // Table
-        // Build the category selector
-        selectorTitle = 'Detail Level';
-        selectorList = this.categorySelectorSpec(componentId, componentState, actions, data);
-      }
-      return (
-        <div>
-          <div>
-            {(accountTypes.length > 1)?(<ToggleButtonSet title='Account Type' columns="3" options={accountTypes}/>):""}
-            {(displayModes.length > 1)?(<ToggleButtonSet title='Display' columns="3" options={displayModes}/>):""}
-            <ToggleButtonSet title={selectorTitle} columns="6" options={selectorList}/>
-          </div>
-        </div>
-      );
-    }
-    else {
-      return (<div> <p>Page is loading ...</p> </div>);
-    }
   }
 }
 

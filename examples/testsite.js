@@ -51,38 +51,6 @@ CBEVars.site = [
             ]
           }
           ]
-        },
-        {
-          "columns": [
-          {
-            "id": "Bottom",
-            "class": "col-xs-4",
-            "components": [
-            {
-              "componentName": "HistoryTable",
-              "componentData": {
-                "mycard": {
-                  "type": "card",
-                  "ids": [
-                   9
-                  ]
-                },
-                "mydataset": {
-                  "type": "dataset",
-                  "ids": [
-                   6,4,5
-                  ]
-                }
-              },
-              "componentProps": {
-                "headerTag": "3"
-              },
-              "componentState": [
-              ]
-            }
-            ]
-          }
-          ]
         }]
       } // Layout
     }, {
@@ -125,7 +93,7 @@ CBEVars.site = [
                     "displayMode": {
                       "type": "string",
                       "array": false,
-                      "value":"Chart",
+                      "value":"Table",
                       "allowedValues": ["Chart", "Table"]
                     },
                     "year": {

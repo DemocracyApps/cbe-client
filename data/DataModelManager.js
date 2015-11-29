@@ -142,6 +142,8 @@ class DataModelManager {
       let datasetList = model.get('datasets').map( (ds) => { return datasets.get(ds).get('data'); }).toArray();
       datasetList.sort( (ds1, ds2) => { return (Number(ds1.get('year')) - Number(ds2.get('year'))); });
       model = model.set('value', fromJS(this.mergeDatasets(datasetList, null, 0.0)));
+//      let func = function (arg) {console.log("I got the argument " + arg);}
+//      model = model.set('func', func);
 
             // return {
             //     //categories:this.initializationParameters.hierarchy,
