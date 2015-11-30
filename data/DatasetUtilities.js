@@ -8,7 +8,7 @@ class DatasetUtilities {
         else {
             for (var prop in node) {
                 if (prop != 'bottom' && node.hasOwnProperty(prop)) {
-                    data = data.concat(DatasetUtilities.extractFromTree(node[prop], threshold));
+                    data = data.concat(this.extractFromTree(node[prop]));
                 }
             }
         }
@@ -23,7 +23,7 @@ class DatasetUtilities {
      *      data - the raw dataset
      *      detailLevel - the maximum depth to go to
      */
-     extractHierarchy (args) {
+     rollupHierarchy (args) {
         console.log("In extractHierarchy with this = " + JSON.stringify(this));
         let data = args.data;
         let detailLevel = args.detailLevel;
@@ -46,7 +46,7 @@ class DatasetUtilities {
                 }
             }
         });
-        let rows = DatasetUtilities.extractFromTree(tree);
+        let rows = this.extractFromTree(tree);
         return rows;
     }
 }

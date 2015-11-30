@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import cache from '../../data/ArtifactCache';
-import DatasetUtilities from '../../data/DatasetUtilities';
+import ModelTransforms from '../../data/ModelTransforms';
 import Sparkline from 'react-sparkline';
 
 class HistoryTable extends Component {
@@ -23,7 +23,7 @@ class HistoryTable extends Component {
       // This will only recompute when necessary
       let rows = cache.computeArtifact( myId, 'processedData',
                                         {data: rawData, detailLevel},
-                                        DatasetUtilities.extractHierarchy);
+                                        ModelTransforms.rollupHierarchy);
       let thStyle={textAlign:"right"};
       console.log("Here's the table! " + JSON.stringify(headers));
       return (
