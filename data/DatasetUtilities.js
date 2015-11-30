@@ -7,7 +7,7 @@ class DatasetUtilities {
         }
         else {
             for (var prop in node) {
-                if (prop != 'bottom' && node.hasOwnProperty(prop)) {
+                if (node.hasOwnProperty(prop)) {
                     data = data.concat(this.extractFromTree(node[prop]));
                 }
             }
@@ -15,16 +15,12 @@ class DatasetUtilities {
         return data;
     }
 
-    hello () {
-        console.log("In hello with this = " + JSON.stringify(this));
-    }
     /* 
      * This routine takes 2 arguments:
      *      data - the raw dataset
      *      detailLevel - the maximum depth to go to
      */
      rollupHierarchy (args) {
-        console.log("In extractHierarchy with this = " + JSON.stringify(this));
         let data = args.data;
         let detailLevel = args.detailLevel;
         let initValues = function(len, value) { let a = []; for (let i=0; i<len; ++i) a.push(value); return a; };

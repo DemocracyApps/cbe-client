@@ -17,8 +17,8 @@ class ArtifactCache {
     }
     else {
       let current = this.artifacts[id][name];
-      for (var key in current.get('args')) {
-        if (!(key in args) || current.get('args').get(key) !== args[key]) {
+      for (var key in current.args) {
+        if (!(key in args) || current.args[key] !== args[key]) {
           recompute = true;
         }
         if (recompute) break;
@@ -29,13 +29,16 @@ class ArtifactCache {
 
   computeArtifact(id, name, args, generator) {
     if (this.needRecompute(id, name, args)) {
-      console.log("We are doing the recompute");
       let artifact = generator(args);
-      if (!(name in this.artifacts[id])) { 
-        this.artifacts[id][name] = fromJS(artifact);
+      let bag = {};
+      for (var key in args) {
+        if (args.hasOwnProperty(key)) {
+          bag[key] = args[key];
+        }
       }
+      this.artifacts[id][name] = {args: bag, value: fromJS(artifact)};
     }
-    return this.artifacts[id][name];
+    return this.artifacts[id][name].value;
   }
 }
 

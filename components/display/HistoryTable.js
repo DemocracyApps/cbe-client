@@ -19,13 +19,11 @@ class HistoryTable extends Component {
       let rawData = data.get('data');
       let myId = this.props.componentId + ('childId' in this.props)?this.props.childId:"";
       let detailLevel = this.props.detailLevel;
-      console.log("HistoryTable: detailLevel = " + detailLevel);
       // This will only recompute when necessary
       let rows = cache.computeArtifact( myId, 'processedData',
                                         {data: rawData, detailLevel},
                                         ModelTransforms.rollupHierarchy);
       let thStyle={textAlign:"right"};
-      console.log("Here's the table! " + JSON.stringify(headers));
       return (
               <div>
                   <table className="table">
