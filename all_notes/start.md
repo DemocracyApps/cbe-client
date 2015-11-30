@@ -1,1 +1,1 @@
-I don't think that ModelTransforms.rollupHierarchy is working correctly. It still rolls up to same number regardless of detail level.
+Could do some cleanup in the rendering routine of ShowMePage, but I think the main next step is to walk into creating the treemap.
