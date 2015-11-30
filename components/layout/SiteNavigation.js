@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import 'jquery';
-import bootstrap, {navbar, navs} from 'bootstrap';
+import bootstrap, {navbar, navs} from 'bootstrap-sass';
 
 class SiteNavigation extends Component {
 
