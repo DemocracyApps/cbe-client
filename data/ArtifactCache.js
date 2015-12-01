@@ -6,38 +6,48 @@ class ArtifactCache {
   }
 
   // Recompute is true the first time or if any arguments change
-  needRecompute(id, name, args) {
+  needRecompute(current, args) {
     let recompute = false;
+    for (var key in current.args) {
+      if (!(key in args) || current.args[key] !== args[key]) {
+        recompute = true;
+      }
+      if (recompute) break;
+    }
+    return recompute;
+  }
+
+  computeArtifact(id, name, data, transforms) {
+    let recompute = false;
+    let initTransforms = function(len) { let a = []; for (let i=0; i<len; ++i) a.push({}); return a; };
     if (!(id in this.artifacts)) {
       this.artifacts[id] = {};
       recompute = true;
     }
     if (!(name in this.artifacts[id])) {
+      this.artifacts[id][name] = {value: null, transforms: initTransforms(transforms.length)};
       recompute = true;
     }
-    else {
-      let current = this.artifacts[id][name];
-      for (var key in current.args) {
-        if (!(key in args) || current.args[key] !== args[key]) {
-          recompute = true;
-        }
-        if (recompute) break;
-      }
-    }
-    return recompute;
-  }
 
-  computeArtifact(id, name, args, generator) {
-    if (this.needRecompute(id, name, args)) {
-      let artifact = generator(args);
-      let bag = {};
-      for (var key in args) {
-        if (args.hasOwnProperty(key)) {
-          bag[key] = args[key];
+    let recomputeIfNeeded = function (previousValue, currentElement, index, array) {
+      let args = currentElement.args;
+      let transform = currentElement.transform;
+      if (!recompute) recompute = this.needRecompute(this.artifacts[id][name].transforms[index], args);
+      if (recompute) {
+        let newValue = transform(previousValue, args);
+        let bag = {};
+        for (var key in args) {
+          if (args.hasOwnProperty(key)) {
+            bag[key] = args[key];
+          }
         }
+        this.artifacts[id][name].transforms[index] = {args: bag, value: fromJS(newValue)};
       }
-      this.artifacts[id][name] = {args: bag, value: fromJS(artifact)};
-    }
+      return this.artifacts[id][name].transforms[index].value;
+    };
+
+    this.artifacts[id][name].value = transforms.reduce (recomputeIfNeeded.bind(this), data);
+
     return this.artifacts[id][name].value;
   }
 }

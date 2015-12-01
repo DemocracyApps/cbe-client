@@ -20,8 +20,8 @@ class DatasetUtilities {
      *      data - the raw dataset
      *      detailLevel - the maximum depth to go to
      */
-     rollupHierarchy (args) {
-        let data = args.data;
+     rollupHierarchy (data, args) {
+//        let data = args.data;
         let detailLevel = args.detailLevel;
         let initValues = function(len, value) { let a = []; for (let i=0; i<len; ++i) a.push(value); return a; };
         let tree = {};
