@@ -12,6 +12,7 @@ class BootstrapLayout extends Component {
     return React.createElement(comp, {
         key: index,
         componentId,
+        site: this.props.site,
         configuration: component.get('properties'),
         cardsets: cardsets,
         datasets: myModels,

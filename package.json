@@ -18,8 +18,12 @@
   },
   "homepage": "https://github.com/DemocracyApps/cbe-client#readme",
   "dependencies": {
+    "blueimp-md5": "^1.1.1",
+    "d3": "^3.5.10",
     "immutable": "^3.7.5",
     "jquery": "^2.1.4",
+    "jquery.cookie": "^1.4.1",
+    "mustache": "^2.2.0",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-redux": "^4.0.0",

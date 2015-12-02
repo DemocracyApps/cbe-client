@@ -62,6 +62,7 @@ export function initializeSite (inputSite, dataModelManager) {
     slug:             inputSite.slug,
     currentPage:      inputSite.currentPage,
     embedded:         inputSite.embedded,
+    maxWidth:         inputSite.maxWidth,
     pages:            {},
     menu:             [], 
     componentClasses:    classes,
