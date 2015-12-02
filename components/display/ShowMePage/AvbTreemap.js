@@ -1,5 +1,7 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import d3 from 'd3';
+require('../../../styles/avb/global.css');
 
 var avbStuff = require('./aux/avb.js');
 
@@ -26,8 +28,7 @@ var AvbTreemap = React.createClass({
     },
 
     prepareData: function(dataset) {
-        console.log("Dataset = " + JSON.stringify(dataset));
-        let years = dataset.get('dataHeaders').toArray();
+        let years = dataset.get('dataPeriods').toArray();
         let inData = dataset.get('data');
 //        let nPeriods = inData[0].amount.length;
         let nPeriods = years.length;
@@ -43,7 +44,6 @@ var AvbTreemap = React.createClass({
             return values;
         };
 
-console.log("Type of md5 is " + typeof md5);
         var tree = {
             key: this.props.accountType,
             hash: md5(this.props.accountType),
@@ -93,47 +93,21 @@ console.log("Type of md5 is " + typeof md5);
 
     componentDidMount: function() {
         console.log("In componentDidMount");
-        var el = React.findDOMNode(this.refs.myChart);
+        var el = ReactDOM.findDOMNode(this.refs.myChart);
         if (this.props.data != null) {
             var data = this.prepareData(this.props.data);
         }
         avbStuff.initialize(data, this.props.year);
     },
 
-    // componentDidUpdate: function() {
-    //     console.log("In componentDidUpdate");
-    //     if (this.props.data != null) {
-    //         var data = this.prepareData(this.props.data);
-    //     }
-    //     avbStuff.initialize(data, this.props.year);
-    // },
-    xrender: function() {
-        return (
-            <div className="container" id="avb-body" style={{width:this.props.width, height:this.props.height}}>
-                <div className="row-fluid span12" id="avb-wrap">
-                    <div id="information-container" className="span6" style={{position:"relative", paddingLeft:5}}>
-                        <p>This is it</p>
-                        { /*  treemap */ }
-                        <div id="navigation-container" className="span6" >
-                            <div className="title-head" style={{height:70}}>
-                                <button id="zoombutton" className="btn pull-right">
-                                    <i className="icon-zoom-out"></i> Go back
-                                </button>
-                            </div>
-                            <div id="navigation" className="row-fluid">
-                                <div id="ie-popover">
-                                    <div className="text"></div>
-                                    <div className="arrow"> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        )
+    componentDidUpdate: function() {
+        console.log("In componentDidUpdate");
+        if (this.props.data != null) {
+            var data = this.prepareData(this.props.data);
+        }
+        avbStuff.initialize(data, this.props.year);
     },
     render: function() {
-console.log("In render")
         return (
         <div className="container" id="avb-body" style={{width:this.props.width, height:this.props.height}}>
             <div className="row-fluid span12" id="avb-wrap">

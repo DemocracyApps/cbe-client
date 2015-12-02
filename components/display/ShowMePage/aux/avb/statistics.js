@@ -30,7 +30,7 @@ License:
 */
 
 var utilities = require('./utilities');
-require('mustache');
+var Mustache = require('mustache');
 var statsHolder = {};
 
 var computeStats = function (avb) {

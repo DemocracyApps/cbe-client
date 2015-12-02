@@ -28,6 +28,7 @@ License:
     See the License for the specific language governing permissions and
     limitations under the License.
 */
+var Mustache = require('mustache');
 
 var avb_cards = function () {
     // all the cards that need to be shown for the current section
