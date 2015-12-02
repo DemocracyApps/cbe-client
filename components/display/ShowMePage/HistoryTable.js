@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import cache from '../../data/ArtifactCache';
-import ModelTransforms from '../../data/ModelTransforms';
+import cache from '../../../data/ArtifactCache';
+import ModelTransforms from '../../../data/ModelTransforms';
 import Sparkline from 'react-sparkline';
 
 class HistoryTable extends Component {

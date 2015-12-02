@@ -5,7 +5,7 @@ import Page from '../components/layout/Page';
  * Load all the available components for use
  */
 import SimpleCard from '../components/display/SimpleCard';
-import HistoryTable from '../components/display/HistoryTable';
+import HistoryTable from '../components/display/ShowMePage/HistoryTable';
 import ShowMePage from '../components/display/ShowMePage/ShowMePage';
 
 function initializeComponentClasses() {

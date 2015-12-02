@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 //import OptionsPanel from './OptionsPanel';
 import ToggleButtonSet from '../ToggleButtonSet';
-import HistoryTable from '../HistoryTable';
+import HistoryTable from './HistoryTable';
 
 class ShowMePage extends Component {
 
