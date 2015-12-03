@@ -46,10 +46,8 @@ class ShowMePage extends Component {
             }
             return (
                 <div>
-                    <div>
-                        {this.optionsPanel(componentId, configuration, componentState, actions,
-                                           data, spending != null, revenue != null)}
-                    </div>
+                    {this.optionsPanel(componentId, configuration, componentState, actions,
+                                       data, spending != null, revenue != null)}
                     {mainComponent}
                 </div>
             );
@@ -78,11 +76,13 @@ class ShowMePage extends Component {
 
         return (
             <div>
-                <div>
+                <hr style={{marginTop:10, marginBottom:10}}/>
+                <div className="row ">
                     {(accountTypes.length > 1)?(<ToggleButtonSet title='Account Type' columns="3" options={accountTypes}/>):""}
                     {(displayModes.length > 1)?(<ToggleButtonSet title='Display' columns="3" options={displayModes}/>):""}
                     <ToggleButtonSet title={selectorTitle} columns="6" options={selectorList}/>
                 </div>
+                <hr style={{marginTop:10, marginBottom:10}}/>
             </div>
         );
     }
