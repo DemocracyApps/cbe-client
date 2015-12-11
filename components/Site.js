@@ -20,6 +20,7 @@ class Site extends Component {
     if (this.props.site.maxWidth) {
       styles = {maxWidth:this.props.site.maxWidth};
     }
+    this.pushUrl(page.get('shortName'));
     return (
       <div className="container" style={styles}>
         <SiteNavigation site={site} actions={this.props.actions}/>
@@ -28,6 +29,35 @@ class Site extends Component {
               actions={this.props.actions}/>
       </div>
     );
+  }
+
+  pushUrl (shortName) {
+      var baseUrl = this.props.site.get('server').get('baseUrl');
+      var embedded = Boolean(this.props.site.get('embedded'));
+      var maxWidth = 0;
+      if (this.props.site.has('maxWidth')) {
+          if (this.props.site.get('maxWidth') != null) {
+              maxWidth = Number(this.props.site.get('maxWidth'));
+          }
+      }
+      if (!baseUrl.endsWith('/')) baseUrl += '/';
+      var url = baseUrl + shortName;
+      var nParams = 0;
+      if (embedded) nParams++;
+      if (maxWidth) nParams++;
+      if (nParams > 0) {
+          var added = "?";
+          if (embedded) {
+              url += "?embedded=true";
+              if (maxWidth > 0) url += "&max-width="+ maxWidth;
+          }
+          else if (maxWidth > 0) url += "?max-width=" + maxWidth;
+      }
+      // create history object
+      window.history.pushState({
+          page: shortName,
+          embedded: this.props.site.embedded
+      }, "", url);
   }
 }
 

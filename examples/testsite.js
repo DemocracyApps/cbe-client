@@ -1,12 +1,11 @@
 window.CBEVars = window.CBEVars || {};
 CBEVars.site = [
 {
-  "server": {
-    "apiUrl":"http://localhost:3000/api/v1"
-  },
   "site": {
-    "currentPage": "ShowMe",
-    "embedded": false,
+    "server": {
+      "apiUrl":"http://localhost:3000/api/v1",
+      "baseUrl":"http://localhost:3000"
+    },
     "name": "Asheville, NC Budget 2015-2016",
     "slug": "asheville",
     "pages": [

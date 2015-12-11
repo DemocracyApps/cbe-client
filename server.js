@@ -8,13 +8,19 @@ var app = new express();
 var port = 3000;
 console.log("Environment is " + JSON.stringify(process.env.NODE_ENV));
 
+app.set('view engine', 'jade');
+
 app.use(express.static('stuff'));
 var compiler = webpack(config);
 app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }));
 app.use(webpackHotMiddleware(compiler));
 
 app.get("/", function(req, res) {
-  console.log("Got a root request");
+  console.log("Got a root request for name = " + req.params.name);
+  res.sendFile(__dirname + '/index.html');
+});
+
+app.get("/:name", function(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 

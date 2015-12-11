@@ -52,17 +52,44 @@ function createComponent(currentId, spec, site, dataModelManager) {
   return component;
 }
 
+function parseQueryString(query) {
+  var query_string = {};
+  if (query.length > 0) {
+      var vars = query.split("&");
+      for (var i=0;i<vars.length;i++) {
+        var pair = vars[i].split("=");
+            // If first entry with this name
+        if (typeof query_string[pair[0]] === "undefined") {
+          query_string[pair[0]] = decodeURIComponent(pair[1]);
+            // If second entry with this name
+        } else if (typeof query_string[pair[0]] === "string") {
+          var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
+          query_string[pair[0]] = arr;
+            // If third or later entry with this name
+        } else {
+          query_string[pair[0]].push(decodeURIComponent(pair[1]));
+        }
+      }
+    }
+    return query_string;
+};
+
 export function initializeSite (inputSite, dataModelManager) {
   // This is a global ID - we'll need to to access other parts of the state
   // associated with a component.
   let componentId = 0; 
   let classes = initializeComponentClasses();
+  let currentPage = window.location.pathname.substring(1);
+  let params = parseQueryString(window.location.search.substring(1));
+
   let site = {
+    server:           inputSite.server,
     name:             inputSite.name,
     slug:             inputSite.slug,
-    currentPage:      inputSite.currentPage,
-    embedded:         inputSite.embedded,
-    maxWidth:         inputSite.maxWidth,
+    currentPage:      currentPage,
+    urlParams:        window.location.search,
+    embedded:         ('embedded' in params)?params.embedded:null,
+    maxWidth:         ('max-width' in params)?params['max-width']:null,
     pages:            {},
     menu:             [], 
     componentClasses:    classes,

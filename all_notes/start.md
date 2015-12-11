@@ -1,5 +1,8 @@
 NEXT:
-Controls are wrong on the treemap part of Showme page.
+2. Create the what's new page
+3. create the budget doc breakdown page
+4. Figure out how to connect to actual dataserver.
+5. Figure out how to put it on a server
 
 LATER:
 

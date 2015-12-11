@@ -38,7 +38,7 @@ export function requestDatasets (datasetIds) {
 }
 
 export function fetchDatasets(datasetIds, dispatch) {
-  let url = CBEVars.site[0].server.apiUrl + "/datasets/" + datasetIds.join();
+  let url = CBEVars.site[0].site.server.apiUrl + "/datasets/" + datasetIds.join();
   console.log("The server API url is " + url);
   dispatch(requestDatasets(datasetIds));
   return  fetch(url)
