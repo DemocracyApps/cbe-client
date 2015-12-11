@@ -1,8 +1,9 @@
 NEXT:
-2. Create the what's new page
-3. create the budget doc breakdown page
-4. Figure out how to connect to actual dataserver.
-5. Figure out how to put it on a server
+* Think about how to let individual components/pages set url params
+* Create the what's new page
+* create the budget doc breakdown page
+* Figure out how to connect to actual dataserver.
+* Figure out how to put it on a server
 
 LATER:
 
