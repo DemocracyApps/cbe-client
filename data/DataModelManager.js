@@ -41,7 +41,8 @@ class DataModelManager {
     let tree = {};
     for (let iPeriod = 0; iPeriod < nPeriods; ++iPeriod) {
       let ds = datasetList[iPeriod];
-      let taxonomy = ds.get('taxonomy');
+//      let taxonomy = ds.get('taxonomy');
+      let taxonomy = ds.get('categoryMap');
       // Throw each row into the tree
       ds.get('values').forEach( (row ) => {
         if (row.get('value').length > 0) {
@@ -77,7 +78,7 @@ class DataModelManager {
 
     let mergedData = this.extractFromTree(tree, threshold);
     // We'll take the category names from the first dataset
-    let categoryHeaders = datasetList[0].get('taxonomy').map((catItem) => {
+    let categoryHeaders = datasetList[0].get('categoryMap').map((catItem) => {
       return catItem.get('name');
     }).toArray();
     let dataHeaders = [];

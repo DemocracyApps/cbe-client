@@ -27,9 +27,11 @@ class ShowMePage extends Component {
             let currentYearIndex = (configuration.get('startYear')==0)?0:years.length-1;
             if (componentState.get('year').get('value') != null) {
                 currentYearIndex = years.indexOf(componentState.get('year').get('value'));
+                if (currentYearIndex < 0) { // Needed if Revenue/Spending have different years.
+                    currentYearIndex = (configuration.get('startYear')==0)?0:years.length-1;
+                }
             }
             let year = years[currentYearIndex] + "";
-
             let mainComponent = null;
             if (componentState.get('displayMode').get('value') == 'Chart') {
                 let width = 1200, height = 600;
@@ -131,6 +133,9 @@ class ShowMePage extends Component {
         let activeIndex = (configuration.get('startYear')==0)?0:years.length-1;
         if (componentState.get('year').get('value') != null) {
             activeIndex = years.indexOf(componentState.get('year').get('value'));
+            if (activeIndex < 0) { // Needed if Revenue/Spending have different years.
+                activeIndex = (configuration.get('startYear')==0)?0:years.length-1;
+            }
         }
 
         let yearOptions = [];

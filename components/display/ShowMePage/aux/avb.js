@@ -154,7 +154,7 @@ function loadData(incomingData) {
     // Possibly clean up child nodes of container:
     $(avb.modes[avb.mode].container).children("svg").remove();
     // navigation (treemap or table)
-    console.log("INitialize the navigation");
+    console.log("Initialize the navigation");
     avb.navigation.initialize($(avb.modes[avb.mode].container), avb.root, avb);
     console.log("open the navigation");
     avb.navigation.open(avb.root.hash, null, avb);

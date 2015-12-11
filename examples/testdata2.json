@@ -1,0 +1,3270 @@
+{
+  "message": "Datasets [\"1\",2,3,4,5,6]",
+  "status_code": 200,
+  "data": [
+    {
+      "version": "1.0.0",
+      "name": "Actual FY 2009",
+      "id": 1,
+      "year": 2009,
+      "type": "Expense",
+      "entity": "Cary, NC",
+      "entityId": "3",
+      "datasource": "Test Data Source",
+      "datasourceId": "1",
+      "categoryMap": [
+        {
+          "name": "Area",
+          "values": [
+            "General Government",
+            "Development & Infrastructure",
+            "Public Safety",
+            "Parks, Recreation & Cultural Resources",
+            "Public Works and Utilities",
+            "Non-Departmental",
+            "Operating Transfers Out (In)",
+            "Capital Transfers Out (In)"
+          ]
+        },
+        {
+          "name": "Category",
+          "values": [
+            "Legislative-Town Council",
+            "Legislative-Boards & Comm.",
+            "Legislative-Town Clerk",
+            "Legislative-Legal",
+            "Town Manager's Office",
+            "Sustainability Office",
+            "Budget Office",
+            "Public Information Office",
+            "Finance-Accounting",
+            "Finance-Purchasing",
+            "Self Insurance (Small Claims)",
+            "Technology Services Capital Leases",
+            "Technology Services",
+            "Human Resources",
+            "Self Insurance (Workman's Comp)",
+            "Planning",
+            "Affordable/Empl Housing Fund",
+            "Development Support",
+            "Inspections & Permits",
+            "Transportation and Facilities",
+            "Water Resources - Infrastructure",
+            "Engineering",
+            "Police",
+            "Police Separation Fund",
+            "Emergency Communications",
+            "Fire",
+            "Administration",
+            "Recreation Programs",
+            "Cultural Arts",
+            "Festival",
+            "Teen Council",
+            "Amphitheatre",
+            "Cary Arts Center",
+            "Cary Theater",
+            "Downtown Special Events",
+            "Tennis Center",
+            "Soccer Park",
+            "Skate Park",
+            "USA Baseball",
+            "Athletics",
+            "Facilities Management",
+            "Operations",
+            "Solid Waste Management",
+            "Recycling",
+            "Yard Waste",
+            "Department  Allocation Accounts",
+            "Miscellaneous",
+            "Class & Pay Study",
+            "Installment Purchase / Related Fees",
+            "Long Term Debt / Related Fees",
+            "Debt Principal",
+            "Debt Principal Pay Down",
+            "Debt Interest",
+            "Debt Interest Pay Down",
+            "Debt Miscellaneous Expense",
+            "Trans. to Transit Fund",
+            "Transfer to Economic Develop Fund",
+            "Trans. to Downtown Cap. Proj. Fund",
+            "Trans. to Streets Cap. Proj. Fund",
+            "Trans. to Gen Govt Cap Proj Fund",
+            "Trans. to Fire Capital Proj Fund",
+            "Trans. to Parks Cap Proj Fund",
+            "Trans. to General Capital Reserve"
+          ]
+        }
+      ],
+      "values": [
+        {
+          "categories": [
+            0,
+            0
+          ],
+          "value": "606494"
+        },
+        {
+          "categories": [
+            0,
+            1
+          ],
+          "value": "135132"
+        },
+        {
+          "categories": [
+            0,
+            2
+          ],
+          "value": "263584"
+        },
+        {
+          "categories": [
+            0,
+            3
+          ],
+          "value": "1213279"
+        },
+        {
+          "categories": [
+            0,
+            4
+          ],
+          "value": "487566"
+        },
+        {
+          "categories": [
+            0,
+            5
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            0,
+            6
+          ],
+          "value": "498407"
+        },
+        {
+          "categories": [
+            0,
+            7
+          ],
+          "value": "525404"
+        },
+        {
+          "categories": [
+            0,
+            8
+          ],
+          "value": "1858139"
+        },
+        {
+          "categories": [
+            0,
+            9
+          ],
+          "value": "802758"
+        },
+        {
+          "categories": [
+            0,
+            10
+          ],
+          "value": "528776"
+        },
+        {
+          "categories": [
+            0,
+            11
+          ],
+          "value": "2129500"
+        },
+        {
+          "categories": [
+            0,
+            12
+          ],
+          "value": "5993492"
+        },
+        {
+          "categories": [
+            0,
+            13
+          ],
+          "value": "1358701"
+        },
+        {
+          "categories": [
+            0,
+            14
+          ],
+          "value": "718523"
+        },
+        {
+          "categories": [
+            1,
+            15
+          ],
+          "value": "2694092"
+        },
+        {
+          "categories": [
+            1,
+            16
+          ],
+          "value": "307501"
+        },
+        {
+          "categories": [
+            1,
+            17
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            1,
+            18
+          ],
+          "value": "3673991"
+        },
+        {
+          "categories": [
+            1,
+            19
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            1,
+            20
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            1,
+            21
+          ],
+          "value": "5515868"
+        },
+        {
+          "categories": [
+            2,
+            22
+          ],
+          "value": "17227114"
+        },
+        {
+          "categories": [
+            2,
+            23
+          ],
+          "value": "242853"
+        },
+        {
+          "categories": [
+            2,
+            24
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            2,
+            25
+          ],
+          "value": "16544822"
+        },
+        {
+          "categories": [
+            3,
+            26
+          ],
+          "value": "1201334"
+        },
+        {
+          "categories": [
+            3,
+            27
+          ],
+          "value": "2823845"
+        },
+        {
+          "categories": [
+            3,
+            28
+          ],
+          "value": "1477911"
+        },
+        {
+          "categories": [
+            3,
+            29
+          ],
+          "value": "106107"
+        },
+        {
+          "categories": [
+            3,
+            30
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            3,
+            31
+          ],
+          "value": "725462"
+        },
+        {
+          "categories": [
+            3,
+            32
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            3,
+            33
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            3,
+            34
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            3,
+            35
+          ],
+          "value": "1214745"
+        },
+        {
+          "categories": [
+            3,
+            36
+          ],
+          "value": "1013725"
+        },
+        {
+          "categories": [
+            3,
+            37
+          ],
+          "value": "189923"
+        },
+        {
+          "categories": [
+            3,
+            38
+          ],
+          "value": "808066"
+        },
+        {
+          "categories": [
+            3,
+            39
+          ],
+          "value": "1338680"
+        },
+        {
+          "categories": [
+            4,
+            26
+          ],
+          "value": "1701726"
+        },
+        {
+          "categories": [
+            4,
+            40
+          ],
+          "value": "13352771"
+        },
+        {
+          "categories": [
+            4,
+            41
+          ],
+          "value": "11579937"
+        },
+        {
+          "categories": [
+            4,
+            42
+          ],
+          "value": "5480534"
+        },
+        {
+          "categories": [
+            4,
+            43
+          ],
+          "value": "1257573"
+        },
+        {
+          "categories": [
+            4,
+            44
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            45
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            46
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            47
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            48
+          ],
+          "value": "335293"
+        },
+        {
+          "categories": [
+            5,
+            49
+          ],
+          "value": "12284681"
+        },
+        {
+          "categories": [
+            5,
+            50
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            51
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            52
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            53
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            54
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            6,
+            55
+          ],
+          "value": "1481803"
+        },
+        {
+          "categories": [
+            6,
+            56
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            7,
+            57
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            7,
+            58
+          ],
+          "value": "601524"
+        },
+        {
+          "categories": [
+            7,
+            59
+          ],
+          "value": "2700000"
+        },
+        {
+          "categories": [
+            7,
+            60
+          ],
+          "value": "454438"
+        },
+        {
+          "categories": [
+            7,
+            61
+          ],
+          "value": "13787540"
+        },
+        {
+          "categories": [
+            7,
+            62
+          ],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "Actual FY 2010",
+      "id": 2,
+      "year": 2010,
+      "type": "Expense",
+      "entity": "Cary, NC",
+      "entityId": "3",
+      "datasource": "Test Data Source",
+      "datasourceId": "1",
+      "categoryMap": [
+        {
+          "name": "Area",
+          "values": [
+            "General Government",
+            "Development & Infrastructure",
+            "Public Safety",
+            "Parks, Recreation & Cultural Resources",
+            "Public Works and Utilities",
+            "Non-Departmental",
+            "Operating Transfers Out (In)",
+            "Capital Transfers Out (In)"
+          ]
+        },
+        {
+          "name": "Category",
+          "values": [
+            "Legislative-Town Council",
+            "Legislative-Boards & Comm.",
+            "Legislative-Town Clerk",
+            "Legislative-Legal",
+            "Town Manager's Office",
+            "Sustainability Office",
+            "Budget Office",
+            "Public Information Office",
+            "Finance-Accounting",
+            "Finance-Purchasing",
+            "Self Insurance (Small Claims)",
+            "Technology Services Capital Leases",
+            "Technology Services",
+            "Human Resources",
+            "Self Insurance (Workman's Comp)",
+            "Planning",
+            "Affordable/Empl Housing Fund",
+            "Development Support",
+            "Inspections & Permits",
+            "Transportation and Facilities",
+            "Water Resources - Infrastructure",
+            "Engineering",
+            "Police",
+            "Police Separation Fund",
+            "Emergency Communications",
+            "Fire",
+            "Administration",
+            "Recreation Programs",
+            "Cultural Arts",
+            "Festival",
+            "Teen Council",
+            "Amphitheatre",
+            "Cary Arts Center",
+            "Cary Theater",
+            "Downtown Special Events",
+            "Tennis Center",
+            "Soccer Park",
+            "Skate Park",
+            "USA Baseball",
+            "Athletics",
+            "Facilities Management",
+            "Operations",
+            "Solid Waste Management",
+            "Recycling",
+            "Yard Waste",
+            "Department  Allocation Accounts",
+            "Miscellaneous",
+            "Class & Pay Study",
+            "Installment Purchase / Related Fees",
+            "Long Term Debt / Related Fees",
+            "Debt Principal",
+            "Debt Principal Pay Down",
+            "Debt Interest",
+            "Debt Interest Pay Down",
+            "Debt Miscellaneous Expense",
+            "Trans. to Transit Fund",
+            "Transfer to Economic Develop Fund",
+            "Trans. to Downtown Cap. Proj. Fund",
+            "Trans. to Streets Cap. Proj. Fund",
+            "Trans. to Gen Govt Cap Proj Fund",
+            "Trans. to Fire Capital Proj Fund",
+            "Trans. to Parks Cap Proj Fund",
+            "Trans. to General Capital Reserve"
+          ]
+        }
+      ],
+      "values": [
+        {
+          "categories": [
+            0,
+            0
+          ],
+          "value": "651684"
+        },
+        {
+          "categories": [
+            0,
+            1
+          ],
+          "value": "134850"
+        },
+        {
+          "categories": [
+            0,
+            2
+          ],
+          "value": "378728"
+        },
+        {
+          "categories": [
+            0,
+            3
+          ],
+          "value": "1707070"
+        },
+        {
+          "categories": [
+            0,
+            4
+          ],
+          "value": "589192"
+        },
+        {
+          "categories": [
+            0,
+            5
+          ],
+          "value": "24941"
+        },
+        {
+          "categories": [
+            0,
+            6
+          ],
+          "value": "674699"
+        },
+        {
+          "categories": [
+            0,
+            7
+          ],
+          "value": "504419"
+        },
+        {
+          "categories": [
+            0,
+            8
+          ],
+          "value": "2038076"
+        },
+        {
+          "categories": [
+            0,
+            9
+          ],
+          "value": "839095"
+        },
+        {
+          "categories": [
+            0,
+            10
+          ],
+          "value": "320879"
+        },
+        {
+          "categories": [
+            0,
+            11
+          ],
+          "value": "737828"
+        },
+        {
+          "categories": [
+            0,
+            12
+          ],
+          "value": "5882671"
+        },
+        {
+          "categories": [
+            0,
+            13
+          ],
+          "value": "1389984"
+        },
+        {
+          "categories": [
+            0,
+            14
+          ],
+          "value": "1035041"
+        },
+        {
+          "categories": [
+            1,
+            15
+          ],
+          "value": "2378652"
+        },
+        {
+          "categories": [
+            1,
+            16
+          ],
+          "value": "417578"
+        },
+        {
+          "categories": [
+            1,
+            17
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            1,
+            18
+          ],
+          "value": "3765348"
+        },
+        {
+          "categories": [
+            1,
+            19
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            1,
+            20
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            1,
+            21
+          ],
+          "value": "5410844"
+        },
+        {
+          "categories": [
+            2,
+            22
+          ],
+          "value": "18986574"
+        },
+        {
+          "categories": [
+            2,
+            23
+          ],
+          "value": "263742"
+        },
+        {
+          "categories": [
+            2,
+            24
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            2,
+            25
+          ],
+          "value": "16494598"
+        },
+        {
+          "categories": [
+            3,
+            26
+          ],
+          "value": "1438565"
+        },
+        {
+          "categories": [
+            3,
+            27
+          ],
+          "value": "2684029"
+        },
+        {
+          "categories": [
+            3,
+            28
+          ],
+          "value": "1546803"
+        },
+        {
+          "categories": [
+            3,
+            29
+          ],
+          "value": "114907"
+        },
+        {
+          "categories": [
+            3,
+            30
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            3,
+            31
+          ],
+          "value": "604816"
+        },
+        {
+          "categories": [
+            3,
+            32
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            3,
+            33
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            3,
+            34
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            3,
+            35
+          ],
+          "value": "1342034"
+        },
+        {
+          "categories": [
+            3,
+            36
+          ],
+          "value": "1045634"
+        },
+        {
+          "categories": [
+            3,
+            37
+          ],
+          "value": "205503"
+        },
+        {
+          "categories": [
+            3,
+            38
+          ],
+          "value": "855606"
+        },
+        {
+          "categories": [
+            3,
+            39
+          ],
+          "value": "1365028"
+        },
+        {
+          "categories": [
+            4,
+            26
+          ],
+          "value": "1700087"
+        },
+        {
+          "categories": [
+            4,
+            40
+          ],
+          "value": "13691448"
+        },
+        {
+          "categories": [
+            4,
+            41
+          ],
+          "value": "11095583"
+        },
+        {
+          "categories": [
+            4,
+            42
+          ],
+          "value": "5082001"
+        },
+        {
+          "categories": [
+            4,
+            43
+          ],
+          "value": "1115361"
+        },
+        {
+          "categories": [
+            4,
+            44
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            45
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            46
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            47
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            48
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            49
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            50
+          ],
+          "value": "7969723"
+        },
+        {
+          "categories": [
+            5,
+            51
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            52
+          ],
+          "value": "4400383"
+        },
+        {
+          "categories": [
+            5,
+            53
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            54
+          ],
+          "value": "342526"
+        },
+        {
+          "categories": [
+            6,
+            55
+          ],
+          "value": "1804524"
+        },
+        {
+          "categories": [
+            6,
+            56
+          ],
+          "value": "248340"
+        },
+        {
+          "categories": [
+            7,
+            57
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            7,
+            58
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            7,
+            59
+          ],
+          "value": "1123700"
+        },
+        {
+          "categories": [
+            7,
+            60
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            7,
+            61
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            7,
+            62
+          ],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "Actual FY 2011",
+      "id": 3,
+      "year": 2011,
+      "type": "Expense",
+      "entity": "Cary, NC",
+      "entityId": "3",
+      "datasource": "Test Data Source",
+      "datasourceId": "1",
+      "categoryMap": [
+        {
+          "name": "Area",
+          "values": [
+            "General Government",
+            "Development & Infrastructure",
+            "Public Safety",
+            "Parks, Recreation & Cultural Resources",
+            "Public Works and Utilities",
+            "Non-Departmental",
+            "Operating Transfers Out (In)",
+            "Capital Transfers Out (In)"
+          ]
+        },
+        {
+          "name": "Category",
+          "values": [
+            "Legislative-Town Council",
+            "Legislative-Boards & Comm.",
+            "Legislative-Town Clerk",
+            "Legislative-Legal",
+            "Town Manager's Office",
+            "Sustainability Office",
+            "Budget Office",
+            "Public Information Office",
+            "Finance-Accounting",
+            "Finance-Purchasing",
+            "Self Insurance (Small Claims)",
+            "Technology Services Capital Leases",
+            "Technology Services",
+            "Human Resources",
+            "Self Insurance (Workman's Comp)",
+            "Planning",
+            "Affordable/Empl Housing Fund",
+            "Development Support",
+            "Inspections & Permits",
+            "Transportation and Facilities",
+            "Water Resources - Infrastructure",
+            "Engineering",
+            "Police",
+            "Police Separation Fund",
+            "Emergency Communications",
+            "Fire",
+            "Administration",
+            "Recreation Programs",
+            "Cultural Arts",
+            "Festival",
+            "Teen Council",
+            "Amphitheatre",
+            "Cary Arts Center",
+            "Cary Theater",
+            "Downtown Special Events",
+            "Tennis Center",
+            "Soccer Park",
+            "Skate Park",
+            "USA Baseball",
+            "Athletics",
+            "Facilities Management",
+            "Operations",
+            "Solid Waste Management",
+            "Recycling",
+            "Yard Waste",
+            "Department  Allocation Accounts",
+            "Miscellaneous",
+            "Class & Pay Study",
+            "Installment Purchase / Related Fees",
+            "Long Term Debt / Related Fees",
+            "Debt Principal",
+            "Debt Principal Pay Down",
+            "Debt Interest",
+            "Debt Interest Pay Down",
+            "Debt Miscellaneous Expense",
+            "Trans. to Transit Fund",
+            "Transfer to Economic Develop Fund",
+            "Trans. to Downtown Cap. Proj. Fund",
+            "Trans. to Streets Cap. Proj. Fund",
+            "Trans. to Gen Govt Cap Proj Fund",
+            "Trans. to Fire Capital Proj Fund",
+            "Trans. to Parks Cap Proj Fund",
+            "Trans. to General Capital Reserve"
+          ]
+        }
+      ],
+      "values": [
+        {
+          "categories": [
+            0,
+            0
+          ],
+          "value": "672830"
+        },
+        {
+          "categories": [
+            0,
+            1
+          ],
+          "value": "141259"
+        },
+        {
+          "categories": [
+            0,
+            2
+          ],
+          "value": "322705"
+        },
+        {
+          "categories": [
+            0,
+            3
+          ],
+          "value": "723135"
+        },
+        {
+          "categories": [
+            0,
+            4
+          ],
+          "value": "696636"
+        },
+        {
+          "categories": [
+            0,
+            5
+          ],
+          "value": "95133"
+        },
+        {
+          "categories": [
+            0,
+            6
+          ],
+          "value": "558016"
+        },
+        {
+          "categories": [
+            0,
+            7
+          ],
+          "value": "492562"
+        },
+        {
+          "categories": [
+            0,
+            8
+          ],
+          "value": "2158073"
+        },
+        {
+          "categories": [
+            0,
+            9
+          ],
+          "value": "870270"
+        },
+        {
+          "categories": [
+            0,
+            10
+          ],
+          "value": "410406"
+        },
+        {
+          "categories": [
+            0,
+            11
+          ],
+          "value": "958419"
+        },
+        {
+          "categories": [
+            0,
+            12
+          ],
+          "value": "5698901"
+        },
+        {
+          "categories": [
+            0,
+            13
+          ],
+          "value": "1490254"
+        },
+        {
+          "categories": [
+            0,
+            14
+          ],
+          "value": "1657752"
+        },
+        {
+          "categories": [
+            1,
+            15
+          ],
+          "value": "2197266"
+        },
+        {
+          "categories": [
+            1,
+            16
+          ],
+          "value": "379215"
+        },
+        {
+          "categories": [
+            1,
+            17
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            1,
+            18
+          ],
+          "value": "3776225"
+        },
+        {
+          "categories": [
+            1,
+            19
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            1,
+            20
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            1,
+            21
+          ],
+          "value": "5843003"
+        },
+        {
+          "categories": [
+            2,
+            22
+          ],
+          "value": "19353190"
+        },
+        {
+          "categories": [
+            2,
+            23
+          ],
+          "value": "236975"
+        },
+        {
+          "categories": [
+            2,
+            24
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            2,
+            25
+          ],
+          "value": "17551975"
+        },
+        {
+          "categories": [
+            3,
+            26
+          ],
+          "value": "1494501"
+        },
+        {
+          "categories": [
+            3,
+            27
+          ],
+          "value": "2770437"
+        },
+        {
+          "categories": [
+            3,
+            28
+          ],
+          "value": "1593664"
+        },
+        {
+          "categories": [
+            3,
+            29
+          ],
+          "value": "107338"
+        },
+        {
+          "categories": [
+            3,
+            30
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            3,
+            31
+          ],
+          "value": "576278"
+        },
+        {
+          "categories": [
+            3,
+            32
+          ],
+          "value": "32872"
+        },
+        {
+          "categories": [
+            3,
+            33
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            3,
+            34
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            3,
+            35
+          ],
+          "value": "1516223"
+        },
+        {
+          "categories": [
+            3,
+            36
+          ],
+          "value": "1234778"
+        },
+        {
+          "categories": [
+            3,
+            37
+          ],
+          "value": "220811"
+        },
+        {
+          "categories": [
+            3,
+            38
+          ],
+          "value": "871135"
+        },
+        {
+          "categories": [
+            3,
+            39
+          ],
+          "value": "1441536"
+        },
+        {
+          "categories": [
+            4,
+            26
+          ],
+          "value": "1888698"
+        },
+        {
+          "categories": [
+            4,
+            40
+          ],
+          "value": "14098640"
+        },
+        {
+          "categories": [
+            4,
+            41
+          ],
+          "value": "12033294"
+        },
+        {
+          "categories": [
+            4,
+            42
+          ],
+          "value": "5695633"
+        },
+        {
+          "categories": [
+            4,
+            43
+          ],
+          "value": "1186760"
+        },
+        {
+          "categories": [
+            4,
+            44
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            45
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            46
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            47
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            48
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            49
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            50
+          ],
+          "value": "7575082"
+        },
+        {
+          "categories": [
+            5,
+            51
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            52
+          ],
+          "value": "3784667"
+        },
+        {
+          "categories": [
+            5,
+            53
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            54
+          ],
+          "value": "370211"
+        },
+        {
+          "categories": [
+            6,
+            55
+          ],
+          "value": "1142376"
+        },
+        {
+          "categories": [
+            6,
+            56
+          ],
+          "value": "235000"
+        },
+        {
+          "categories": [
+            7,
+            57
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            7,
+            58
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            7,
+            59
+          ],
+          "value": "2226756"
+        },
+        {
+          "categories": [
+            7,
+            60
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            7,
+            61
+          ],
+          "value": "31437"
+        },
+        {
+          "categories": [
+            7,
+            62
+          ],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "Actual FY 2012",
+      "id": 4,
+      "year": 2012,
+      "type": "Expense",
+      "entity": "Cary, NC",
+      "entityId": "3",
+      "datasource": "Test Data Source",
+      "datasourceId": "1",
+      "categoryMap": [
+        {
+          "name": "Area",
+          "values": [
+            "General Government",
+            "Development & Infrastructure",
+            "Public Safety",
+            "Parks, Recreation & Cultural Resources",
+            "Public Works and Utilities",
+            "Non-Departmental",
+            "Operating Transfers Out (In)",
+            "Capital Transfers Out (In)"
+          ]
+        },
+        {
+          "name": "Category",
+          "values": [
+            "Legislative-Town Council",
+            "Legislative-Boards & Comm.",
+            "Legislative-Town Clerk",
+            "Legislative-Legal",
+            "Town Manager's Office",
+            "Sustainability Office",
+            "Budget Office",
+            "Public Information Office",
+            "Finance-Accounting",
+            "Finance-Purchasing",
+            "Self Insurance (Small Claims)",
+            "Technology Services Capital Leases",
+            "Technology Services",
+            "Human Resources",
+            "Self Insurance (Workman's Comp)",
+            "Planning",
+            "Affordable/Empl Housing Fund",
+            "Development Support",
+            "Inspections & Permits",
+            "Transportation and Facilities",
+            "Water Resources - Infrastructure",
+            "Engineering",
+            "Police",
+            "Police Separation Fund",
+            "Emergency Communications",
+            "Fire",
+            "Administration",
+            "Recreation Programs",
+            "Cultural Arts",
+            "Festival",
+            "Teen Council",
+            "Amphitheatre",
+            "Cary Arts Center",
+            "Cary Theater",
+            "Downtown Special Events",
+            "Tennis Center",
+            "Soccer Park",
+            "Skate Park",
+            "USA Baseball",
+            "Athletics",
+            "Facilities Management",
+            "Operations",
+            "Solid Waste Management",
+            "Recycling",
+            "Yard Waste",
+            "Department  Allocation Accounts",
+            "Miscellaneous",
+            "Class & Pay Study",
+            "Installment Purchase / Related Fees",
+            "Long Term Debt / Related Fees",
+            "Debt Principal",
+            "Debt Principal Pay Down",
+            "Debt Interest",
+            "Debt Interest Pay Down",
+            "Debt Miscellaneous Expense",
+            "Trans. to Transit Fund",
+            "Transfer to Economic Develop Fund",
+            "Trans. to Downtown Cap. Proj. Fund",
+            "Trans. to Streets Cap. Proj. Fund",
+            "Trans. to Gen Govt Cap Proj Fund",
+            "Trans. to Fire Capital Proj Fund",
+            "Trans. to Parks Cap Proj Fund",
+            "Trans. to General Capital Reserve"
+          ]
+        }
+      ],
+      "values": [
+        {
+          "categories": [
+            0,
+            0
+          ],
+          "value": "671551"
+        },
+        {
+          "categories": [
+            0,
+            1
+          ],
+          "value": "145465"
+        },
+        {
+          "categories": [
+            0,
+            2
+          ],
+          "value": "417847"
+        },
+        {
+          "categories": [
+            0,
+            3
+          ],
+          "value": "1428789"
+        },
+        {
+          "categories": [
+            0,
+            4
+          ],
+          "value": "790167"
+        },
+        {
+          "categories": [
+            0,
+            5
+          ],
+          "value": "172007"
+        },
+        {
+          "categories": [
+            0,
+            6
+          ],
+          "value": "594944"
+        },
+        {
+          "categories": [
+            0,
+            7
+          ],
+          "value": "634641"
+        },
+        {
+          "categories": [
+            0,
+            8
+          ],
+          "value": "2180264"
+        },
+        {
+          "categories": [
+            0,
+            9
+          ],
+          "value": "923526"
+        },
+        {
+          "categories": [
+            0,
+            10
+          ],
+          "value": "276499"
+        },
+        {
+          "categories": [
+            0,
+            11
+          ],
+          "value": "1261901"
+        },
+        {
+          "categories": [
+            0,
+            12
+          ],
+          "value": "5520953"
+        },
+        {
+          "categories": [
+            0,
+            13
+          ],
+          "value": "1493516"
+        },
+        {
+          "categories": [
+            0,
+            14
+          ],
+          "value": "1586970"
+        },
+        {
+          "categories": [
+            1,
+            15
+          ],
+          "value": "2431534"
+        },
+        {
+          "categories": [
+            1,
+            16
+          ],
+          "value": "223824"
+        },
+        {
+          "categories": [
+            1,
+            17
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            1,
+            18
+          ],
+          "value": "3871712"
+        },
+        {
+          "categories": [
+            1,
+            19
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            1,
+            20
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            1,
+            21
+          ],
+          "value": "6384437"
+        },
+        {
+          "categories": [
+            2,
+            22
+          ],
+          "value": "21659535"
+        },
+        {
+          "categories": [
+            2,
+            23
+          ],
+          "value": "282466"
+        },
+        {
+          "categories": [
+            2,
+            24
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            2,
+            25
+          ],
+          "value": "17872391"
+        },
+        {
+          "categories": [
+            3,
+            26
+          ],
+          "value": "1681485"
+        },
+        {
+          "categories": [
+            3,
+            27
+          ],
+          "value": "2894006"
+        },
+        {
+          "categories": [
+            3,
+            28
+          ],
+          "value": "982319"
+        },
+        {
+          "categories": [
+            3,
+            29
+          ],
+          "value": "61722"
+        },
+        {
+          "categories": [
+            3,
+            30
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            3,
+            31
+          ],
+          "value": "251060"
+        },
+        {
+          "categories": [
+            3,
+            32
+          ],
+          "value": "1354772"
+        },
+        {
+          "categories": [
+            3,
+            33
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            3,
+            34
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            3,
+            35
+          ],
+          "value": "1643885"
+        },
+        {
+          "categories": [
+            3,
+            36
+          ],
+          "value": "894612"
+        },
+        {
+          "categories": [
+            3,
+            37
+          ],
+          "value": "249119"
+        },
+        {
+          "categories": [
+            3,
+            38
+          ],
+          "value": "794268"
+        },
+        {
+          "categories": [
+            3,
+            39
+          ],
+          "value": "1479521"
+        },
+        {
+          "categories": [
+            4,
+            26
+          ],
+          "value": "1944323"
+        },
+        {
+          "categories": [
+            4,
+            40
+          ],
+          "value": "14556443"
+        },
+        {
+          "categories": [
+            4,
+            41
+          ],
+          "value": "12571573"
+        },
+        {
+          "categories": [
+            4,
+            42
+          ],
+          "value": "5678569"
+        },
+        {
+          "categories": [
+            4,
+            43
+          ],
+          "value": "1301520"
+        },
+        {
+          "categories": [
+            4,
+            44
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            45
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            46
+          ],
+          "value": "19954"
+        },
+        {
+          "categories": [
+            5,
+            47
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            48
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            49
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            50
+          ],
+          "value": "9807673"
+        },
+        {
+          "categories": [
+            5,
+            51
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            52
+          ],
+          "value": "3680121"
+        },
+        {
+          "categories": [
+            5,
+            53
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            54
+          ],
+          "value": "322208"
+        },
+        {
+          "categories": [
+            6,
+            55
+          ],
+          "value": "1035204"
+        },
+        {
+          "categories": [
+            6,
+            56
+          ],
+          "value": "335000"
+        },
+        {
+          "categories": [
+            7,
+            57
+          ],
+          "value": "6985000"
+        },
+        {
+          "categories": [
+            7,
+            58
+          ],
+          "value": "500000"
+        },
+        {
+          "categories": [
+            7,
+            59
+          ],
+          "value": "3978339"
+        },
+        {
+          "categories": [
+            7,
+            60
+          ],
+          "value": "1605000"
+        },
+        {
+          "categories": [
+            7,
+            61
+          ],
+          "value": "2906193"
+        },
+        {
+          "categories": [
+            7,
+            62
+          ],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "Actual FY 2013",
+      "id": 5,
+      "year": 2013,
+      "type": "Expense",
+      "entity": "Cary, NC",
+      "entityId": "3",
+      "datasource": "Test Data Source",
+      "datasourceId": "1",
+      "categoryMap": [
+        {
+          "name": "Area",
+          "values": [
+            "General Government",
+            "Development & Infrastructure",
+            "Public Safety",
+            "Parks, Recreation & Cultural Resources",
+            "Public Works and Utilities",
+            "Non-Departmental",
+            "Operating Transfers Out (In)",
+            "Capital Transfers Out (In)"
+          ]
+        },
+        {
+          "name": "Category",
+          "values": [
+            "Legislative-Town Council",
+            "Legislative-Boards & Comm.",
+            "Legislative-Town Clerk",
+            "Legislative-Legal",
+            "Town Manager's Office",
+            "Sustainability Office",
+            "Budget Office",
+            "Public Information Office",
+            "Finance-Accounting",
+            "Finance-Purchasing",
+            "Self Insurance (Small Claims)",
+            "Technology Services Capital Leases",
+            "Technology Services",
+            "Human Resources",
+            "Self Insurance (Workman's Comp)",
+            "Planning",
+            "Affordable/Empl Housing Fund",
+            "Development Support",
+            "Inspections & Permits",
+            "Transportation and Facilities",
+            "Water Resources - Infrastructure",
+            "Engineering",
+            "Police",
+            "Police Separation Fund",
+            "Emergency Communications",
+            "Fire",
+            "Administration",
+            "Recreation Programs",
+            "Cultural Arts",
+            "Festival",
+            "Teen Council",
+            "Amphitheatre",
+            "Cary Arts Center",
+            "Cary Theater",
+            "Downtown Special Events",
+            "Tennis Center",
+            "Soccer Park",
+            "Skate Park",
+            "USA Baseball",
+            "Athletics",
+            "Facilities Management",
+            "Operations",
+            "Solid Waste Management",
+            "Recycling",
+            "Yard Waste",
+            "Department  Allocation Accounts",
+            "Miscellaneous",
+            "Class & Pay Study",
+            "Installment Purchase / Related Fees",
+            "Long Term Debt / Related Fees",
+            "Debt Principal",
+            "Debt Principal Pay Down",
+            "Debt Interest",
+            "Debt Interest Pay Down",
+            "Debt Miscellaneous Expense",
+            "Trans. to Transit Fund",
+            "Transfer to Economic Develop Fund",
+            "Trans. to Downtown Cap. Proj. Fund",
+            "Trans. to Streets Cap. Proj. Fund",
+            "Trans. to Gen Govt Cap Proj Fund",
+            "Trans. to Fire Capital Proj Fund",
+            "Trans. to Parks Cap Proj Fund",
+            "Trans. to General Capital Reserve"
+          ]
+        }
+      ],
+      "values": [
+        {
+          "categories": [
+            0,
+            0
+          ],
+          "value": "669775"
+        },
+        {
+          "categories": [
+            0,
+            1
+          ],
+          "value": "141870"
+        },
+        {
+          "categories": [
+            0,
+            2
+          ],
+          "value": "328740"
+        },
+        {
+          "categories": [
+            0,
+            3
+          ],
+          "value": "1367904"
+        },
+        {
+          "categories": [
+            0,
+            4
+          ],
+          "value": "789555"
+        },
+        {
+          "categories": [
+            0,
+            5
+          ],
+          "value": "120484"
+        },
+        {
+          "categories": [
+            0,
+            6
+          ],
+          "value": "653574"
+        },
+        {
+          "categories": [
+            0,
+            7
+          ],
+          "value": "621254"
+        },
+        {
+          "categories": [
+            0,
+            8
+          ],
+          "value": "2287541"
+        },
+        {
+          "categories": [
+            0,
+            9
+          ],
+          "value": "872914"
+        },
+        {
+          "categories": [
+            0,
+            10
+          ],
+          "value": "124563"
+        },
+        {
+          "categories": [
+            0,
+            11
+          ],
+          "value": "636858"
+        },
+        {
+          "categories": [
+            0,
+            12
+          ],
+          "value": "5740562"
+        },
+        {
+          "categories": [
+            0,
+            13
+          ],
+          "value": "1455683"
+        },
+        {
+          "categories": [
+            0,
+            14
+          ],
+          "value": "1355617"
+        },
+        {
+          "categories": [
+            1,
+            15
+          ],
+          "value": "2811612"
+        },
+        {
+          "categories": [
+            1,
+            16
+          ],
+          "value": "274326"
+        },
+        {
+          "categories": [
+            1,
+            17
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            1,
+            18
+          ],
+          "value": "3825614"
+        },
+        {
+          "categories": [
+            1,
+            19
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            1,
+            20
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            1,
+            21
+          ],
+          "value": "6745183"
+        },
+        {
+          "categories": [
+            2,
+            22
+          ],
+          "value": "21159738"
+        },
+        {
+          "categories": [
+            2,
+            23
+          ],
+          "value": "300000"
+        },
+        {
+          "categories": [
+            2,
+            24
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            2,
+            25
+          ],
+          "value": "19101058"
+        },
+        {
+          "categories": [
+            3,
+            26
+          ],
+          "value": "1549351"
+        },
+        {
+          "categories": [
+            3,
+            27
+          ],
+          "value": "2911481"
+        },
+        {
+          "categories": [
+            3,
+            28
+          ],
+          "value": "968778"
+        },
+        {
+          "categories": [
+            3,
+            29
+          ],
+          "value": "125218"
+        },
+        {
+          "categories": [
+            3,
+            30
+          ],
+          "value": "3777"
+        },
+        {
+          "categories": [
+            3,
+            31
+          ],
+          "value": "588858"
+        },
+        {
+          "categories": [
+            3,
+            32
+          ],
+          "value": "1516532"
+        },
+        {
+          "categories": [
+            3,
+            33
+          ],
+          "value": "95"
+        },
+        {
+          "categories": [
+            3,
+            34
+          ],
+          "value": "99047"
+        },
+        {
+          "categories": [
+            3,
+            35
+          ],
+          "value": "1512665"
+        },
+        {
+          "categories": [
+            3,
+            36
+          ],
+          "value": "970975"
+        },
+        {
+          "categories": [
+            3,
+            37
+          ],
+          "value": "268500"
+        },
+        {
+          "categories": [
+            3,
+            38
+          ],
+          "value": "766435"
+        },
+        {
+          "categories": [
+            3,
+            39
+          ],
+          "value": "1550123"
+        },
+        {
+          "categories": [
+            4,
+            26
+          ],
+          "value": "2215596"
+        },
+        {
+          "categories": [
+            4,
+            40
+          ],
+          "value": "14746796"
+        },
+        {
+          "categories": [
+            4,
+            41
+          ],
+          "value": "12386718"
+        },
+        {
+          "categories": [
+            4,
+            42
+          ],
+          "value": "6009383"
+        },
+        {
+          "categories": [
+            4,
+            43
+          ],
+          "value": "1407245"
+        },
+        {
+          "categories": [
+            4,
+            44
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            45
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            46
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            47
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            48
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            49
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            50
+          ],
+          "value": "9570193"
+        },
+        {
+          "categories": [
+            5,
+            51
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            52
+          ],
+          "value": "3268400"
+        },
+        {
+          "categories": [
+            5,
+            53
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            54
+          ],
+          "value": "244535"
+        },
+        {
+          "categories": [
+            6,
+            55
+          ],
+          "value": "1546854"
+        },
+        {
+          "categories": [
+            6,
+            56
+          ],
+          "value": "233524"
+        },
+        {
+          "categories": [
+            7,
+            57
+          ],
+          "value": "2610606"
+        },
+        {
+          "categories": [
+            7,
+            58
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            7,
+            59
+          ],
+          "value": "2074650"
+        },
+        {
+          "categories": [
+            7,
+            60
+          ],
+          "value": "678000"
+        },
+        {
+          "categories": [
+            7,
+            61
+          ],
+          "value": "1202011"
+        },
+        {
+          "categories": [
+            7,
+            62
+          ],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "Actual FY 2014",
+      "id": 6,
+      "year": 2014,
+      "type": "Expense",
+      "entity": "Cary, NC",
+      "entityId": "3",
+      "datasource": "Test Data Source",
+      "datasourceId": "1",
+      "categoryMap": [
+        {
+          "name": "Area",
+          "values": [
+            "General Government",
+            "Development & Infrastructure",
+            "Public Safety",
+            "Parks, Recreation & Cultural Resources",
+            "Public Works and Utilities",
+            "Non-Departmental",
+            "Operating Transfers Out (In)",
+            "Capital Transfers Out (In)"
+          ]
+        },
+        {
+          "name": "Category",
+          "values": [
+            "Legislative-Town Council",
+            "Legislative-Boards & Comm.",
+            "Legislative-Town Clerk",
+            "Legislative-Legal",
+            "Town Manager's Office",
+            "Sustainability Office",
+            "Budget Office",
+            "Public Information Office",
+            "Finance-Accounting",
+            "Finance-Purchasing",
+            "Self Insurance (Small Claims)",
+            "Technology Services Capital Leases",
+            "Technology Services",
+            "Human Resources",
+            "Self Insurance (Workman's Comp)",
+            "Planning",
+            "Affordable/Empl Housing Fund",
+            "Development Support",
+            "Inspections & Permits",
+            "Transportation and Facilities",
+            "Water Resources - Infrastructure",
+            "Engineering",
+            "Police",
+            "Police Separation Fund",
+            "Emergency Communications",
+            "Fire",
+            "Administration",
+            "Recreation Programs",
+            "Cultural Arts",
+            "Festival",
+            "Teen Council",
+            "Amphitheatre",
+            "Cary Arts Center",
+            "Cary Theater",
+            "Downtown Special Events",
+            "Tennis Center",
+            "Soccer Park",
+            "Skate Park",
+            "USA Baseball",
+            "Athletics",
+            "Facilities Management",
+            "Operations",
+            "Solid Waste Management",
+            "Recycling",
+            "Yard Waste",
+            "Department  Allocation Accounts",
+            "Miscellaneous",
+            "Class & Pay Study",
+            "Installment Purchase / Related Fees",
+            "Long Term Debt / Related Fees",
+            "Debt Principal",
+            "Debt Principal Pay Down",
+            "Debt Interest",
+            "Debt Interest Pay Down",
+            "Debt Miscellaneous Expense",
+            "Trans. to Transit Fund",
+            "Transfer to Economic Develop Fund",
+            "Trans. to Downtown Cap. Proj. Fund",
+            "Trans. to Streets Cap. Proj. Fund",
+            "Trans. to Gen Govt Cap Proj Fund",
+            "Trans. to Fire Capital Proj Fund",
+            "Trans. to Parks Cap Proj Fund",
+            "Trans. to General Capital Reserve"
+          ]
+        }
+      ],
+      "values": [
+        {
+          "categories": [
+            0,
+            0
+          ],
+          "value": "625378"
+        },
+        {
+          "categories": [
+            0,
+            1
+          ],
+          "value": "144505"
+        },
+        {
+          "categories": [
+            0,
+            2
+          ],
+          "value": "457472"
+        },
+        {
+          "categories": [
+            0,
+            3
+          ],
+          "value": "1034612"
+        },
+        {
+          "categories": [
+            0,
+            4
+          ],
+          "value": "1240628"
+        },
+        {
+          "categories": [
+            0,
+            5
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            0,
+            6
+          ],
+          "value": "499437"
+        },
+        {
+          "categories": [
+            0,
+            7
+          ],
+          "value": "722115"
+        },
+        {
+          "categories": [
+            0,
+            8
+          ],
+          "value": "2413125"
+        },
+        {
+          "categories": [
+            0,
+            9
+          ],
+          "value": "817475"
+        },
+        {
+          "categories": [
+            0,
+            10
+          ],
+          "value": "204252"
+        },
+        {
+          "categories": [
+            0,
+            11
+          ],
+          "value": "1157013"
+        },
+        {
+          "categories": [
+            0,
+            12
+          ],
+          "value": "6515350"
+        },
+        {
+          "categories": [
+            0,
+            13
+          ],
+          "value": "1718860"
+        },
+        {
+          "categories": [
+            0,
+            14
+          ],
+          "value": "1548029"
+        },
+        {
+          "categories": [
+            1,
+            15
+          ],
+          "value": "2594484"
+        },
+        {
+          "categories": [
+            1,
+            16
+          ],
+          "value": "92721"
+        },
+        {
+          "categories": [
+            1,
+            17
+          ],
+          "value": "413105"
+        },
+        {
+          "categories": [
+            1,
+            18
+          ],
+          "value": "3541840"
+        },
+        {
+          "categories": [
+            1,
+            19
+          ],
+          "value": "2154347"
+        },
+        {
+          "categories": [
+            1,
+            20
+          ],
+          "value": "1182027"
+        },
+        {
+          "categories": [
+            1,
+            21
+          ],
+          "value": "3116230"
+        },
+        {
+          "categories": [
+            2,
+            22
+          ],
+          "value": "21972674"
+        },
+        {
+          "categories": [
+            2,
+            23
+          ],
+          "value": "318291"
+        },
+        {
+          "categories": [
+            2,
+            24
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            2,
+            25
+          ],
+          "value": "19404246"
+        },
+        {
+          "categories": [
+            3,
+            26
+          ],
+          "value": "1370286"
+        },
+        {
+          "categories": [
+            3,
+            27
+          ],
+          "value": "3007862"
+        },
+        {
+          "categories": [
+            3,
+            28
+          ],
+          "value": "890796"
+        },
+        {
+          "categories": [
+            3,
+            29
+          ],
+          "value": "111061"
+        },
+        {
+          "categories": [
+            3,
+            30
+          ],
+          "value": "16073"
+        },
+        {
+          "categories": [
+            3,
+            31
+          ],
+          "value": "620163"
+        },
+        {
+          "categories": [
+            3,
+            32
+          ],
+          "value": "1611484"
+        },
+        {
+          "categories": [
+            3,
+            33
+          ],
+          "value": "227729"
+        },
+        {
+          "categories": [
+            3,
+            34
+          ],
+          "value": "204452"
+        },
+        {
+          "categories": [
+            3,
+            35
+          ],
+          "value": "1678117"
+        },
+        {
+          "categories": [
+            3,
+            36
+          ],
+          "value": "1259445"
+        },
+        {
+          "categories": [
+            3,
+            37
+          ],
+          "value": "235139"
+        },
+        {
+          "categories": [
+            3,
+            38
+          ],
+          "value": "970198"
+        },
+        {
+          "categories": [
+            3,
+            39
+          ],
+          "value": "1592619"
+        },
+        {
+          "categories": [
+            4,
+            26
+          ],
+          "value": "1698346"
+        },
+        {
+          "categories": [
+            4,
+            40
+          ],
+          "value": "15839988"
+        },
+        {
+          "categories": [
+            4,
+            41
+          ],
+          "value": "12692725"
+        },
+        {
+          "categories": [
+            4,
+            42
+          ],
+          "value": "4500220"
+        },
+        {
+          "categories": [
+            4,
+            43
+          ],
+          "value": "1490453"
+        },
+        {
+          "categories": [
+            4,
+            44
+          ],
+          "value": "2156528"
+        },
+        {
+          "categories": [
+            5,
+            45
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            46
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            47
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            48
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            49
+          ],
+          "value": ""
+        },
+        {
+          "categories": [
+            5,
+            50
+          ],
+          "value": "7268770"
+        },
+        {
+          "categories": [
+            5,
+            51
+          ],
+          "value": "6030000"
+        },
+        {
+          "categories": [
+            5,
+            52
+          ],
+          "value": "2768004"
+        },
+        {
+          "categories": [
+            5,
+            53
+          ],
+          "value": "35638"
+        },
+        {
+          "categories": [
+            5,
+            54
+          ],
+          "value": "464898"
+        },
+        {
+          "categories": [
+            6,
+            55
+          ],
+          "value": "1446994"
+        },
+        {
+          "categories": [
+            6,
+            56
+          ],
+          "value": "657000"
+        },
+        {
+          "categories": [
+            7,
+            57
+          ],
+          "value": "970000"
+        },
+        {
+          "categories": [
+            7,
+            58
+          ],
+          "value": "3556783"
+        },
+        {
+          "categories": [
+            7,
+            59
+          ],
+          "value": "4029141"
+        },
+        {
+          "categories": [
+            7,
+            60
+          ],
+          "value": "1350000"
+        },
+        {
+          "categories": [
+            7,
+            61
+          ],
+          "value": "6357500"
+        },
+        {
+          "categories": [
+            7,
+            62
+          ],
+          "value": ""
+        }
+      ]
+    }
+  ]
+}

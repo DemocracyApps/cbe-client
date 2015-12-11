@@ -20,7 +20,7 @@ app.get("/", function(req, res) {
 
 app.get("/api/v1/datasets/*", function (req, res) {
   console.log("Got an API request.");
-  res.sendFile(__dirname + '/examples/testdata.json');
+  res.sendFile(__dirname + '/examples/testdata2.json');
 });
 
 app.listen(port, function(error) {

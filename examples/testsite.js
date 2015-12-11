@@ -38,7 +38,7 @@ CBEVars.site = [
                 "mydataset": {
                   "type": "dataset",
                   "ids": [
-                   88
+                   4
                   ]
                 }
               },
@@ -72,12 +72,12 @@ CBEVars.site = [
                     "spending": {
                       "type": "dataset",
                       "ids": [
-                       6,4,5
+                       1,2,3
                       ]
                     },
                     "revenue": {
                       "type": "dataset",
-                      "ids": [4,5]
+                      "ids": [5,6]
                     }
                   },
                   "componentProps": {

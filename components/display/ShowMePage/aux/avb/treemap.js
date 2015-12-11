@@ -52,15 +52,12 @@ var avb_treemap = function () {
     *   @param {node} data - root node that will become root level of treemap
     */
     var initialize = function ($container, data, avb) {
-        console.log("Initializing the treemap! Container = " + JSON.stringify($container));
         localAvb = avb;
         var width = $container.width(),
             height = $container.height();
         var height = height,
             formatNumber = d3.format(",d"),
             transitioning;
-        console.log("Width = " + JSON.stringify(width));
-        console.log("Height = " + JSON.stringify(height));
         // create svg
         var tmp = d3.select($container.get(0));
 
@@ -106,8 +103,6 @@ var avb_treemap = function () {
         */
     var update = function (data, avb) {
         localAvb = avb;
-        console.log("The yearIndex is " + avb.yearIndex);
-        console.log("avb = " + JSON.stringify(avb));
             // remove all old treemap elements
             nav.selectAll("g").remove();
 

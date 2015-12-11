@@ -1638,8 +1638,8 @@
             "version": "1.0.0",
             "name": "Dummy Data Set",
             "id": 88,
-            "year": 2002,
-            "type": "Expense",
+            "year": 2014,
+            "type": "Revenue",
             "entity": "Cary, NC",
             "entityId": "3",
             "datasource": "Test Data Source",
@@ -1733,28 +1733,28 @@
                         0,
                         0
                     ],
-                    "value": "671551"
+                    "value": "1671551"
                 },
                 {
                     "categories": [
                         0,
                         1
                     ],
-                    "value": "145465"
+                    "value": "1454652"
                 },
                 {
                     "categories": [
                         0,
                         2
                     ],
-                    "value": "417847"
+                    "value": "1417847"
                 },
                 {
                     "categories": [
                         0,
                         3
                     ],
-                    "value": "1428789"
+                    "value": "12428789"
                 },
                 {
                     "categories": [
@@ -1782,7 +1782,7 @@
                         0,
                         7
                     ],
-                    "value": "634641"
+                    "value": "1634641"
                 },
                 {
                     "categories": [
@@ -1810,14 +1810,14 @@
                         0,
                         11
                     ],
-                    "value": "1261901"
+                    "value": "12261901"
                 },
                 {
                     "categories": [
                         0,
                         12
                     ],
-                    "value": "5520953"
+                    "value": "15520953"
                 },
                 {
                     "categories": [
@@ -1838,7 +1838,7 @@
                         1,
                         15
                     ],
-                    "value": "2431534"
+                    "value": "22431534"
                 },
                 {
                     "categories": [
@@ -1859,7 +1859,7 @@
                         1,
                         18
                     ],
-                    "value": "3871712"
+                    "value": "13871712"
                 },
                 {
                     "categories": [
@@ -1880,21 +1880,21 @@
                         1,
                         21
                     ],
-                    "value": "6384437"
+                    "value": "96384437"
                 },
                 {
                     "categories": [
                         2,
                         22
                     ],
-                    "value": "21659535"
+                    "value": "221659535"
                 },
                 {
                     "categories": [
                         2,
                         23
                     ],
-                    "value": "282466"
+                    "value": "2282466"
                 },
                 {
                     "categories": [
@@ -1908,14 +1908,14 @@
                         2,
                         25
                     ],
-                    "value": "17872391"
+                    "value": "217872391"
                 },
                 {
                     "categories": [
                         3,
                         26
                     ],
-                    "value": "1681485"
+                    "value": "16814852"
                 },
                 {
                     "categories": [
@@ -1929,14 +1929,14 @@
                         3,
                         28
                     ],
-                    "value": "982319"
+                    "value": "3982319"
                 },
                 {
                     "categories": [
                         3,
                         29
                     ],
-                    "value": "61722"
+                    "value": "661722"
                 },
                 {
                     "categories": [
@@ -2034,14 +2034,14 @@
                         4,
                         42
                     ],
-                    "value": "5678569"
+                    "value": "35678569"
                 },
                 {
                     "categories": [
                         4,
                         43
                     ],
-                    "value": "1301520"
+                    "value": "61301520"
                 },
                 {
                     "categories": [
@@ -2062,7 +2062,7 @@
                         5,
                         46
                     ],
-                    "value": "19954"
+                    "value": "119954"
                 },
                 {
                     "categories": [
@@ -2090,7 +2090,7 @@
                         5,
                         50
                     ],
-                    "value": "9807673"
+                    "value": "29807673"
                 },
                 {
                     "categories": [
@@ -2125,7 +2125,7 @@
                         6,
                         55
                     ],
-                    "value": "1035204"
+                    "value": "51035204"
                 },
                 {
                     "categories": [
@@ -2146,14 +2146,14 @@
                         7,
                         58
                     ],
-                    "value": "500000"
+                    "value": "5500000"
                 },
                 {
                     "categories": [
                         7,
                         59
                     ],
-                    "value": "3978339"
+                    "value": "23978339"
                 },
                 {
                     "categories": [
@@ -2167,7 +2167,7 @@
                         7,
                         61
                     ],
-                    "value": "2906193"
+                    "value": "32906193"
                 },
                 {
                     "categories": [

@@ -45,7 +45,9 @@ export function fetchDatasets(datasetIds, dispatch) {
           .then(response => response.json())
           .then(
             (json)     => {
+              console.log("Data length is " + json.data.length);
               for (let i=0; i<json.data.length; ++i) {
+                console.log("Dispatch " + json.data[i].id);
                 dispatch(receiveDataset(json.data[i]));
               }
             }
