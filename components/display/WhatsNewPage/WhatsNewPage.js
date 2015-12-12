@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import ToggleButtonSet from '../ToggleButtonSet';
-import HistoryTable from './HistoryTable';
-import AvbTreemap from './AvbTreemap';
+import ChangesTable from './ChangesTable';
+import ChangesChart from './ChangesChart';
 
-class ShowMePage extends Component {
+class WhatsNewPage extends Component {
 
     render() {
         const { datasets, componentId, configuration, componentState, actions } = this.props;
@@ -19,19 +19,10 @@ class ShowMePage extends Component {
             let data = spending;
             let accountType = "Expenses";
             if (spending == null || componentState.get('accountType').get("value") == "Revenue") {
-              data = revenue;
-              accountType = "Revenue";
+                data = revenue;
+                accountType = "Revenue";
             }
 
-            let years = data.get('value').get('dataPeriods').toArray();
-            let currentYearIndex = (configuration.get('startYear')==0)?0:years.length-1;
-            if (componentState.get('year').get('value') != null) {
-                currentYearIndex = years.indexOf(componentState.get('year').get('value'));
-                if (currentYearIndex < 0) { // Needed if Revenue/Spending have different years.
-                    currentYearIndex = (configuration.get('startYear')==0)?0:years.length-1;
-                }
-            }
-            let year = years[currentYearIndex] + "";
             let mainComponent = null;
             if (componentState.get('displayMode').get('value') == 'Chart') {
                 let width = 1200, height = 600;
@@ -39,10 +30,10 @@ class ShowMePage extends Component {
                     width = Number(this.props.site.maxWidth);
                     height = Math.trunc(height*width/1200);
                 }
-                mainComponent = (<AvbTreemap width={width} height={height} accountType={accountType} year={year} data={data.get('value')} componentId={componentId} childId="-0"/>);
+                mainComponent = (<ChangesChart />);
             }
             else { // Table
-                mainComponent = (<HistoryTable  data={data.get('value')} 
+                mainComponent = (<ChangesTable  data={data.get('value')} 
                                                 detailLevel={componentState.get('detailLevel').get('value')}
                                                 componentId={componentId} childId="-1"/>);
             }
@@ -164,7 +155,7 @@ class ShowMePage extends Component {
     }
 }
 
-ShowMePage.PropTypes = {
+WhatsNewPage.PropTypes = {
     componentId: PropTypes.string.isRequired,
     configuration: PropTypes.object.isRequired,
     componentState: PropTypes.object.isRequired,
@@ -172,4 +163,4 @@ ShowMePage.PropTypes = {
     actions: PropTypes.object.isRequired
 };
 
-export default ShowMePage;
+export default WhatsNewPage;

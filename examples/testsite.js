@@ -115,6 +115,70 @@ CBEVars.site = [
         }
         ]
       }      
+    },
+    {
+      "title": "What's New?",
+      "shortName": "whatsnew",
+      "menuName": "What's New?",
+      "description": "This is the What's New page.",
+      "layout": {
+        "rows": [
+        {
+          "columns": [
+            {
+              "id": "Nothing",
+              "class": "col-xs-12",
+              "components":[
+                {
+                  "componentName": "WhatsNewPage",
+                  "componentData": {
+                    "spending": {
+                      "type": "dataset",
+                      "ids": [
+                       1,2,3
+                      ]
+                    },
+                    "revenue": {
+                      "type": "dataset",
+                      "ids": [5,6]
+                    }
+                  },
+                  "componentProps": {
+                    "startYear": "1"
+                  },
+                  "componentState": {
+                    "accountType": {
+                      "type": "string",
+                      "array": false,
+                      "value": "Spending",
+                      "allowedValues": ["Spending", "Revenue"]
+                    },
+                    "displayMode": {
+                      "type": "string",
+                      "array": false,
+                      "value":"Table",
+                      "allowedValues": ["Chart", "Table"]
+                    },
+                    "year": {
+                      "type": "number",
+                      "array": false,
+                      "value": null,
+                      "allowedValues": null
+                    },
+                    "detailLevel": {
+                      "type": "number",
+                      "array": false,
+                      "value": 0,
+                      "allowedValues": null
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+        ]
+      }      
     }] // Pages
   },
   "cards": [

@@ -7,12 +7,14 @@ import Page from '../components/layout/Page';
 import SimpleCard from '../components/display/SimpleCard';
 import HistoryTable from '../components/display/ShowMePage/HistoryTable';
 import ShowMePage from '../components/display/ShowMePage/ShowMePage';
+import WhatsNewPage from '../components/display/WhatsNewPage/WhatsNewPage';
 
 function initializeComponentClasses() {
   let components = {};
   components['SimpleCard'] = SimpleCard;
   components['HistoryTable'] = HistoryTable;
   components['ShowMePage'] = ShowMePage;
+  components['WhatsNewPage'] = WhatsNewPage;
   return components;
 }
 
