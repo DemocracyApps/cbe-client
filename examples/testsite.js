@@ -159,12 +159,6 @@ CBEVars.site = [
                       "value":"Table",
                       "allowedValues": ["Chart", "Table"]
                     },
-                    "year": {
-                      "type": "number",
-                      "array": false,
-                      "value": null,
-                      "allowedValues": null
-                    },
                     "detailLevel": {
                       "type": "number",
                       "array": false,

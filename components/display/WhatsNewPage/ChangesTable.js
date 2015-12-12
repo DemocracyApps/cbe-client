@@ -4,8 +4,106 @@ import ModelTransforms from '../../../data/ModelTransforms';
 import Sparkline from 'react-sparkline';
 
 class ChangesTable extends Component {
+
     render() {
-        return (<p>Hello</p>);
+        const { dataset } = this.props;
+        let rows = this.props.rows.toJS();
+        if (dataset == undefined || dataset == null) {
+          return (<div>
+                    <p>ChangesTable loading...</p>
+                  </div>)
+        }
+        else {
+          let headers = dataset.get('dataHeaders').toArray(); 
+          let years = dataset.get('dataPeriods').toArray();
+          let thStyle={textAlign:"right"};
+          rows = rows.sort(this.sortByAbsoluteDifference)
+          return (
+                  <div>
+                      <table className="table">
+                          <thead>
+                            <tr>
+                                <th key="0">Category</th>
+                                <th key="1">History<br/>{years[0]}-{years[years.size-1]}</th>
+                                <th key="2" style={thStyle}>{headers[years.size-2]}</th>
+                                <th key="3" style={thStyle}>{headers[years.size-1]}</th>
+                                <th key="4" style={thStyle}>Percentage<br/>Change</th>
+                                <th key="5" style={thStyle}>Actual<br/>Difference</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {rows.map(this.tableRow,this)}
+                          </tbody>
+                      </table>
+                  </div>
+          );
+        }
+    }
+
+    sortByAbsoluteDifference(item1, item2) {
+        let len = item1.differences.length;
+        var result = Math.abs(item2.differences[len-1]) - Math.abs(item1.differences[len-1]);
+        return result;
+    }
+
+    tableRow(item, index) {
+        let length = item.values.length;
+        let label = item.categories[0];
+        var selectedLevel = this.props.detailLevel;
+        if (selectedLevel > 0) {
+            for (let i=1; i<=selectedLevel; ++i) {
+                label += " " + String.fromCharCode(183) + " "+item.categories[i];
+            }
+        }
+        label = this.createLabel(item);
+
+        let tdStyle={textAlign:"right"};
+        return <tr key={index}>
+            <td key="0" style={{width:"35%"}}>{label}</td>
+            <td>
+                <Sparkline data={item.values} />
+            </td>
+            <td key="1" style={tdStyle}>{this.formatDollarAmount(item.values[length-2])}</td>
+            <td key="2" style={tdStyle}>{this.formatDollarAmount(item.values[length-1])}</td>
+            <td key="3" style={tdStyle}>{item.percents[item.percents.length-1]}</td>
+            <td key="4" style={tdStyle}>{this.formatDollarAmount(item.differences[item.differences.length-1])}</td>
+        </tr>
+    }
+
+    createLabel (item) {
+        var label = "";
+        /*
+         A. If the table is sorted by a value (the What's New table):
+             1. if the detail level is Department, show as <Department> (<Service Area or Fund>)
+             2. if the detail level is Division, show as <Division> (<Service Area> . <Department>)
+             3. if the detail level is Account, show as <Division>.<Account> (<Service Area> . <Department)
+         B. If the table is sorted by category (the Show Me The Money table),
+            show as a hierarchy (for now using indentation - I'll add dynamic hierarchy as a separate issue).
+         */
+        if (this.props.selectedLevel < 3) {
+            label = item.categories[this.props.selectedLevel];
+            if (this.props.selectedLevel == 1) {
+                label += " (" + item.categories[0] + ")";
+            }
+            else {
+                label += " (" + item.categories[0] + String.fromCharCode(183) + item.categories[1] + ")";
+            }
+        }
+        else {
+            label = item.categories[2] + String.fromCharCode(183) + item.categories[3];
+            label += " (" + item.categories[0] + String.fromCharCode(183) + item.categories[1] + ")";
+        }
+        return label;
+    }
+
+    formatDollarAmount(x) {
+        x = Math.round(x);
+        let prefix = '$';
+        if (x < 0.) prefix = '-$';
+        x = Math.abs(x);
+        let val = prefix + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+        return val;
     }
 }
 

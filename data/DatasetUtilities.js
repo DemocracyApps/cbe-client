@@ -1,3 +1,7 @@
+/*
+ * NOTE: When adding a routine here that will be directly passed to ArtifactCache.computeArtifact as a
+ * transform, be sure to add it to the constructor of the wrapper class, ModelTransforms.js.
+ */
 class DatasetUtilities {
 
     extractFromTree (node) {
@@ -52,18 +56,18 @@ class DatasetUtilities {
      * entries (or N/A or New for negative items or items with previous value zero, respectively). It also
      * outputs a 'percentSort' field based on the *last* difference.
      */
-     differences (data, args) {
+
+    differences (data, args) {
         let useInfinity = args.useInfinity;
         let rows = [];
         let initValues = function(len, value) { let a = []; for (let i=0; i<len; ++i) a.push(value); return a; };
         data.map(function (row, index) {
-            let len = row['values'].lenght;
+            let len = row['values'].length;
             let current = {
                 categories: row['categories'].slice(0),
                 values: initValues(len, 0.0),
                 differences: initValues(len-1,0.0),
-                percents: initValues(len-1,""),
-                percentSort: 0
+                percents: initValues(len-1,"")
             };
 
             row['values'].forEach((item, index) => {
@@ -83,17 +87,14 @@ class DatasetUtilities {
                         else {
                             current['percents'][i-1] = "New";
                         }
-                        current['percentSort'] = 10000 * Math.abs(diff);
                     }
                     else if (cur < 0. || prev < 0.) {
                         current['percents'][i-1] ="N/A";
-                        current['percentSort'] = 10000 * Math.abs(diff);
                     }
                     else {
                         let pct = Math.round(1000*(diff)/prev)/10;
                         if (pct > 0) pct = "+" + pct;
                         current['percents'][i-1] = (pct) + "%";
-                        current['percentSort'] = Math.abs(current['percents'][i-1]);
                     }
                 }
             }

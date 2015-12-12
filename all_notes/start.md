@@ -1,6 +1,7 @@
 NEXT:
-* Think about how to let individual components/pages set url params
+* Think about how to let individual components/pages set url params (and at least remember chart vs table)
 * Create the what's new page
+* Store revenue and expense as separate artifacts
 * create the budget doc breakdown page
 * Figure out how to connect to actual dataserver.
 * Figure out how to put it on a server

@@ -49,7 +49,6 @@ class ArtifactCache {
       }
       return this.artifacts[id][name].transforms[index].value;
     };
-
     this.artifacts[id][name].value = transforms.reduce (recomputeIfNeeded.bind(this), data);
 
     return this.artifacts[id][name].value;

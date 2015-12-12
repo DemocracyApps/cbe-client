@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react';
+import cache from '../../../data/ArtifactCache';
+import ModelTransforms from '../../../data/ModelTransforms';
 import ToggleButtonSet from '../ToggleButtonSet';
 import ChangesTable from './ChangesTable';
 import ChangesChart from './ChangesChart';
@@ -22,7 +24,12 @@ class WhatsNewPage extends Component {
                 data = revenue;
                 accountType = "Revenue";
             }
-
+            let myId = this.props.componentId + ('childId' in this.props)?this.props.childId:"";
+            let detailLevel = componentState.get('detailLevel').get('value');
+            let rows = cache.computeArtifact( myId, 'processedData', data.get('value').get('data'),
+                                            [{transform: ModelTransforms.rollupHierarchy, args: {detailLevel}},
+                                             {transform: ModelTransforms.differences, args: {useInfinity: false}}]);
+            console.log("Back from computeArtifact with row count " + rows.size);
             let mainComponent = null;
             if (componentState.get('displayMode').get('value') == 'Chart') {
                 let width = 1200, height = 600;
@@ -33,7 +40,8 @@ class WhatsNewPage extends Component {
                 mainComponent = (<ChangesChart />);
             }
             else { // Table
-                mainComponent = (<ChangesTable  data={data.get('value')} 
+                console.log("Do the table with rows " + JSON.stringify(rows));
+                mainComponent = (<ChangesTable  rows={rows} dataset={data.get('value')} 
                                                 detailLevel={componentState.get('detailLevel').get('value')}
                                                 componentId={componentId} childId="-1"/>);
             }
@@ -56,16 +64,9 @@ class WhatsNewPage extends Component {
                                                  actions, haveSpending, haveRevenue);
         let displayModes = this.displayModesSpec(componentId, componentState, actions);
 
-        if (componentState.get('displayMode').get('value') == 'Chart') {
-            // Build the year selector
-            selectorTitle = 'Year';
-            selectorList = this.yearSelectorSpec(componentId, configuration, componentState, actions, data);
-        }
-        else { // Table
-            // Build the category selector
-            selectorTitle = 'Detail Level';
-            selectorList = this.categorySelectorSpec(componentId, componentState, actions, data);
-        }
+        // Build the category selector
+        selectorTitle = 'Detail Level';
+        selectorList = this.categorySelectorSpec(componentId, componentState, actions, data);
 
         return (
             <div>
@@ -117,27 +118,6 @@ class WhatsNewPage extends Component {
                             (componentState.get('displayMode').get("value") == "Table"),
                             actions));
         return displayModes;
-    }
-
-    yearSelectorSpec (componentId, configuration, componentState, actions, data) {
-        let years = data.get('value').get('dataPeriods').toArray();
-        let activeIndex = (configuration.get('startYear')==0)?0:years.length-1;
-        if (componentState.get('year').get('value') != null) {
-            activeIndex = years.indexOf(componentState.get('year').get('value'));
-            if (activeIndex < 0) { // Needed if Revenue/Spending have different years.
-                activeIndex = (configuration.get('startYear')==0)?0:years.length-1;
-            }
-        }
-
-        let yearOptions = [];
-        data.get('value').get('dataPeriods').forEach( (year, index) => {
-            let active = false;
-            if (index == activeIndex) active = true
-            yearOptions.push(this.buttonSpec("" + year,
-                              {componentId, variableName: 'year', value: year},
-                              active, actions));
-        });
-        return yearOptions;
     }
 
     categorySelectorSpec (componentId, componentState, actions, data) {
