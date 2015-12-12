@@ -17,6 +17,10 @@ class ArtifactCache {
     return recompute;
   }
 
+  /*
+   * This applies an array of transforms to the data, one after another, each taking the output of the previous as input.
+   * Each transform is computed only if either the input data or any of the arguments have changed.
+   */
   computeArtifact(id, name, data, transforms) {
     let recompute = false;
     let initTransforms = function(len) { let a = []; for (let i=0; i<len; ++i) a.push({}); return a; };
@@ -34,7 +38,7 @@ class ArtifactCache {
       let transform = currentElement.transform;
       if (!recompute) recompute = this.needRecompute(this.artifacts[id][name].transforms[index], args);
       if (recompute) {
-        let newValue = transform(previousValue, args);
+        let newValue = transform(previousValue.toJS(), args);
         let bag = {};
         for (var key in args) {
           if (args.hasOwnProperty(key)) {
