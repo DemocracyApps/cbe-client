@@ -90,12 +90,18 @@ class ShowMePage extends Component {
     }
 
     buttonSpec (name, actionValue, active, actions) {
-        return {
+        let spec = {
             name,
-            action: actions.setComponentState,
-            actionValue,
+            actions: [
+                {
+                    action: actions.setComponentState,
+                    value: actionValue,
+                }
+            ],
             active
         };
+        console.log("buttonSpec with actions type " + typeof spec.actions[0].action);
+        return spec;
     }
 
     accountTypesSpec (componentId, componentState, actions, doSpending, doRevenue) {

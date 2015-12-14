@@ -84,10 +84,14 @@ class WhatsNewPage extends Component {
 
     buttonSpec (name, actionValue, active, actions) {
         return {
-            name,
-            action: actions.setComponentState,
-            actionValue,
-            active
+            name: name,
+            actions: [
+                {
+                    action: actions.setComponentState,
+                    value: actionValue
+                }
+            ],
+            active: active
         };
     }
 

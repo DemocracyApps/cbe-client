@@ -2,14 +2,17 @@ import React, { Component, PropTypes } from 'react';
 
 class ToggleButtonSet extends Component {
 
-  onButtonClicked(action, value) {
-    action(value);
-  }
+    onButtonClicked(actions) {
+        for (let index in actions) {
+            let item = actions[index];
+            item.action(item.value);
+        }
+    }
 
   createButton (item, index) {
     var callback;
-    if (item.action != undefined) {
-      callback = this.onButtonClicked.bind(this, item.action, item.actionValue);
+    if (item.actions != undefined) {
+      callback = this.onButtonClicked.bind(this, item.actions);
     }
     else {
       callback = function noop(){};
@@ -21,6 +24,7 @@ class ToggleButtonSet extends Component {
     } else if (item.active) {
       className += " btn-primary active";
     }
+    console.log("createButton - callback type is " + typeof callback);
     return (<button key={item.name} className={className} onClick={callback}>{item.name}</button>);
   }
 
