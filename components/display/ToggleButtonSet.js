@@ -24,7 +24,6 @@ class ToggleButtonSet extends Component {
     } else if (item.active) {
       className += " btn-primary active";
     }
-    console.log("createButton - callback type is " + typeof callback);
     return (<button key={item.name} className={className} onClick={callback}>{item.name}</button>);
   }
 

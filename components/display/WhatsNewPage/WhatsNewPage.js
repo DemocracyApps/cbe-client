@@ -82,15 +82,17 @@ class WhatsNewPage extends Component {
         );
     }
 
-    buttonSpec (name, actionValue, active, actions) {
+    buttonSpec (name, actionValues, active, actions) {
+        let actionList = [];
+        for (let i=0; i<actionValues.length; ++i) {
+            actionList.push({
+                action: actions.setComponentState,
+                value: actionValues[i]
+            });
+        }
         return {
             name: name,
-            actions: [
-                {
-                    action: actions.setComponentState,
-                    value: actionValue
-                }
-            ],
+            actions: actionList,
             active: active
         };
     }
@@ -99,13 +101,19 @@ class WhatsNewPage extends Component {
         let accountTypes = [];
         if (doSpending) {
             accountTypes.push(this.buttonSpec("Spending",
-                                {componentId, variableName:'accountType', value:'Spending'},
+                                [
+                                    {componentId, variableName:'accountType', value:'Spending'},
+                                    {componentId, variableName: 'selectedArea', value: -1}
+                                ],
                                 (componentState.get('accountType').get("value") == "Spending"),
                                 actions));
         }
         if (doRevenue) {
             accountTypes.push(this.buttonSpec("Revenue",
-                                {componentId, variableName:'accountType', value:'Revenue'},
+                                [
+                                    {componentId, variableName:'accountType', value:'Revenue'},
+                                    {componentId, variableName: 'selectedArea', value: -1}
+                                ],
                                 (componentState.get('accountType').get("value") == "Revenue"),
                                 actions));
         }
@@ -115,11 +123,11 @@ class WhatsNewPage extends Component {
     displayModesSpec (componentId, componentState, actions) {
         let displayModes = [];
         displayModes.push(this.buttonSpec("Chart",
-                            {componentId, variableName: 'displayMode', value: "Chart"},
+                            [{componentId, variableName: 'displayMode', value: "Chart"}],
                             (componentState.get('displayMode').get("value") == "Chart"),
                             actions));
         displayModes.push(this.buttonSpec("Table",
-                            {componentId, variableName: 'displayMode', value: "Table"},
+                            [{componentId, variableName: 'displayMode', value: "Table"}],
                             (componentState.get('displayMode').get("value") == "Table"),
                             actions));
         return displayModes;
@@ -133,7 +141,7 @@ class WhatsNewPage extends Component {
             let active = false;
             if (index == activeIndex) active = true
             categoryOptions.push(this.buttonSpec("" + category,
-                              {componentId, variableName: 'detailLevel', value: index},
+                              [{componentId, variableName: 'detailLevel', value: index}],
                               active, actions));
             });
         return categoryOptions;

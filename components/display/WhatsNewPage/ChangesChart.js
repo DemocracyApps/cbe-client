@@ -76,7 +76,7 @@ class ChangesChart extends Component {
         let areaHash = {};
         let nYears = rows.get(0).get('values').size;
         rows.forEach((row) => {
-            console.log("Row: " + JSON.stringify(row));
+//            console.log("Row: " + JSON.stringify(row));
             if (!(row['categories'] in areaHash)) {
                 let area = {
                     name: row.get('categories').get(0),
