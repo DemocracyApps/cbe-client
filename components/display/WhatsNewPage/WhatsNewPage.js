@@ -40,7 +40,6 @@ class WhatsNewPage extends Component {
                 mainComponent = (<ChangesChart />);
             }
             else { // Table
-                console.log("Do the table with rows " + JSON.stringify(rows));
                 mainComponent = (<ChangesTable  rows={rows} dataset={data.get('value')} 
                                                 detailLevel={componentState.get('detailLevel').get('value')}
                                                 componentId={componentId} childId="-1"/>);

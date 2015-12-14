@@ -39,15 +39,12 @@ export function requestDatasets (datasetIds) {
 
 export function fetchDatasets(datasetIds, dispatch) {
   let url = CBEVars.site[0].site.server.apiUrl + "/datasets/" + datasetIds.join();
-  console.log("The server API url is " + url);
   dispatch(requestDatasets(datasetIds));
   return  fetch(url)
           .then(response => response.json())
           .then(
             (json)     => {
-              console.log("Data length is " + json.data.length);
               for (let i=0; i<json.data.length; ++i) {
-                console.log("Dispatch " + json.data[i].id);
                 dispatch(receiveDataset(json.data[i]));
               }
             }

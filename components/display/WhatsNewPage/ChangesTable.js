@@ -48,14 +48,7 @@ class ChangesTable extends Component {
 
     tableRow(item, index) {
         let length = item.values.length;
-        let label = item.categories[0];
-        var selectedLevel = this.props.detailLevel;
-        if (selectedLevel > 0) {
-            for (let i=1; i<=selectedLevel; ++i) {
-                label += " " + String.fromCharCode(183) + " "+item.categories[i];
-            }
-        }
-        label = this.createLabel(item);
+        let label = this.createLabel(item);
 
         let tdStyle={textAlign:"right"};
         return <tr key={index}>
@@ -80,12 +73,12 @@ class ChangesTable extends Component {
          B. If the table is sorted by category (the Show Me The Money table),
             show as a hierarchy (for now using indentation - I'll add dynamic hierarchy as a separate issue).
          */
-        if (this.props.selectedLevel < 3) {
-            label = item.categories[this.props.selectedLevel];
-            if (this.props.selectedLevel == 1) {
+        if (this.props.detailLevel < 3) {
+            label = item.categories[this.props.detailLevel];
+            if (this.props.detailLevel == 1) {
                 label += " (" + item.categories[0] + ")";
             }
-            else {
+            else if (this.props.detailLevel > 0) {
                 label += " (" + item.categories[0] + String.fromCharCode(183) + item.categories[1] + ")";
             }
         }
