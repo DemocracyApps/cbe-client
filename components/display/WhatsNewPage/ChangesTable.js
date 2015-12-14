@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import cache from '../../../data/ArtifactCache';
 import ModelTransforms from '../../../data/ModelTransforms';
 import Sparkline from 'react-sparkline';
+import FormattingUtilities from '../utilities/FormattingUtilities';
 
 class ChangesTable extends Component {
 
@@ -56,10 +57,10 @@ class ChangesTable extends Component {
             <td>
                 <Sparkline data={item.values} />
             </td>
-            <td key="1" style={tdStyle}>{this.formatDollarAmount(item.values[length-2])}</td>
-            <td key="2" style={tdStyle}>{this.formatDollarAmount(item.values[length-1])}</td>
+            <td key="1" style={tdStyle}>{FormattingUtilities.formatDollarAmount(item.values[length-2])}</td>
+            <td key="2" style={tdStyle}>{FormattingUtilities.formatDollarAmount(item.values[length-1])}</td>
             <td key="3" style={tdStyle}>{item.percents[item.percents.length-1]}</td>
-            <td key="4" style={tdStyle}>{this.formatDollarAmount(item.differences[item.differences.length-1])}</td>
+            <td key="4" style={tdStyle}>{FormattingUtilities.formatDollarAmount(item.differences[item.differences.length-1])}</td>
         </tr>
     }
 
@@ -87,16 +88,6 @@ class ChangesTable extends Component {
             label += " (" + item.categories[0] + String.fromCharCode(183) + item.categories[1] + ")";
         }
         return label;
-    }
-
-    formatDollarAmount(x) {
-        x = Math.round(x);
-        let prefix = '$';
-        if (x < 0.) prefix = '-$';
-        x = Math.abs(x);
-        let val = prefix + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
-        return val;
     }
 }
 

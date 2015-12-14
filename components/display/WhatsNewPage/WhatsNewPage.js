@@ -39,7 +39,9 @@ class WhatsNewPage extends Component {
                 mainComponent = (<ChangesChart rows={rows} dataset={data.get('value')}
                                                detailLevel = {componentState.get('detailLevel').get('value')}
                                                selectedArea = {componentState.get('selectedArea').get('value')}
-                                               componentId={componentId} childId="-1"/>);
+                                               accountType = {componentState.get('accountType').get('value')}
+                                               componentId={componentId} childId="-1"
+                                               actions = {actions}/>);
             }
             else { // Table
                 mainComponent = (<ChangesTable  rows={rows} dataset={data.get('value')} 

@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import cache from '../../../data/ArtifactCache';
 import ModelTransforms from '../../../data/ModelTransforms';
 import Sparkline from 'react-sparkline';
+import FormattingUtilities from '../utilities/FormattingUtilities';
 
 class HistoryTable extends Component {
 
@@ -47,16 +48,6 @@ class HistoryTable extends Component {
     }
   }
 
-  formatDollarAmount(x) {
-        x = Math.round(x);
-        let prefix = '$';
-        if (x < 0.) prefix = '-$';
-        x = Math.abs(x);
-        let val = prefix + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
-        return val;
-  }
-
   tableRow (item, index) {
     let categories = item.get('categories').toArray();
     let values     = item.get('values').toArray();
@@ -77,7 +68,7 @@ class HistoryTable extends Component {
         </td>
         {values.map(
           function(item, index) {
-            return <td key={index+1} style={tdStyle}>{this.formatDollarAmount(item)}</td>
+            return <td key={index+1} style={tdStyle}>{FormattingUtilities.formatDollarAmount(item)}</td>
           }, this)}
       </tr>
     );
