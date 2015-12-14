@@ -24,7 +24,7 @@ class ChangesTable extends Component {
                           <thead>
                             <tr>
                                 <th key="0">Category</th>
-                                <th key="1">History<br/>{years[0]}-{years[years.size-1]}</th>
+                                <th key="1">History<br/>{years[0]}-{years[years.length-1]}</th>
                                 <th key="2" style={thStyle}>{headers[years.size-2]}</th>
                                 <th key="3" style={thStyle}>{headers[years.size-1]}</th>
                                 <th key="4" style={thStyle}>Percentage<br/>Change</th>
