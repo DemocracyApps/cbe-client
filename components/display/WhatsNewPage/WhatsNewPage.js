@@ -29,7 +29,6 @@ class WhatsNewPage extends Component {
             let rows = cache.computeArtifact( myId, 'processedData', data.get('value').get('data'),
                                             [{transform: ModelTransforms.rollupHierarchy, args: {detailLevel}},
                                              {transform: ModelTransforms.differences, args: {useInfinity: false}}]);
-            console.log("Back from computeArtifact with row count " + rows.size);
             let mainComponent = null;
             if (componentState.get('displayMode').get('value') == 'Chart') {
                 let width = 1200, height = 600;
@@ -37,7 +36,10 @@ class WhatsNewPage extends Component {
                     width = Number(this.props.site.maxWidth);
                     height = Math.trunc(height*width/1200);
                 }
-                mainComponent = (<ChangesChart />);
+                mainComponent = (<ChangesChart rows={rows} dataset={data.get('value')}
+                                               detailLevel = {componentState.get('detailLevel').get('value')}
+                                               selectedArea = {componentState.get('selectedArea').get('value')}
+                                               componentId={componentId} childId="-1"/>);
             }
             else { // Table
                 mainComponent = (<ChangesTable  rows={rows} dataset={data.get('value')} 

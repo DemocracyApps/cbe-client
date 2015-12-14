@@ -164,6 +164,12 @@ CBEVars.site = [
                       "array": false,
                       "value": 0,
                       "allowedValues": null
+                    },
+                    "selectedArea": {
+                      "type": "number",
+                      "array": false,
+                      "value": -1,
+                      "allowedValues": null
                     }
                   }
                 }
